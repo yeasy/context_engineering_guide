@@ -132,6 +132,17 @@ graph LR
 
 👉 **推荐**：[GitBook 在线版](https://yeasy.gitbook.io/context_engineering_guide/)
 
+### 本地阅读
+
+使用 [HonKit](https://github.com/honkit/honkit) 构建本地阅读环境：
+
+```bash
+npm install        # 安装依赖
+npx honkit serve   # 启动本地服务
+```
+
+启动后访问 http://localhost:4000 即可阅读。
+
 ### 阅读建议
 
 ```
