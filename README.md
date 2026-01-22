@@ -130,7 +130,7 @@ graph LR
 
 ### 在线阅读
 
-👉 **推荐**：[GitBook 在线版](https://yeasy.gitbook.io/context-engineering-guide)
+👉 **推荐**：[GitBook 在线版](https://yeasy.gitbook.io/context_engineering_guide/)
 
 ### 阅读建议
 
