@@ -1,0 +1,26 @@
+{
+  "name": "context_engineering_guide",
+  "version": "1.0.0",
+  "description": "Context Engineering Guide - A comprehensive guide for context engineering in AI applications",
+  "scripts": {
+    "init": "honkit init",
+    "build": "honkit build",
+    "serve": "honkit serve",
+    "pdf": "honkit pdf ./ ./context_engineering_guide.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeasy/context_engineering_guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yeasy/context_engineering_guide/issues"
+  },
+  "homepage": "https://github.com/yeasy/context_engineering_guide#readme",
+  "devDependencies": {
+    "honkit": "^6.1.4"
+  }
+}
