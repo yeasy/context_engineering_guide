@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/yeasy/context_engineering_guide#readme",
   "devDependencies": {
-    "honkit": "^6.1.4"
+    "honkit": "^6.1.4",
+    "honkit-plugin-mermaid": "^0.1.4"
   }
 }
