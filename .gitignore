@@ -1,58 +1,25 @@
-# Context Engineering Guide - GitBook
-
-# Dependencies
+# Node modules
 node_modules/
+package-lock.json
 
-# GitBook build output
+# Book build output
 _book/
 
-# OS generated files
+# OS specific
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Editor files
-*.swp
-*.swo
-*~
+# Editors
 .idea/
 .vscode/
-*.sublime-project
-*.sublime-workspace
+*.swp
+*.swo
 
-# Log files
-*.log
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Temporary files
-*.tmp
-*.temp
-.cache/
-
-# Build artifacts
-dist/
-build/
-out/
-
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Python (if any scripts used)
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-venv/
-.venv/
-
-# Images backup/temp
-*_images/*.bak
-*_images/temp/
+# Agent
+.agent/
+.gemini/

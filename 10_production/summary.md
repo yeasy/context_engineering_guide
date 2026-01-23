@@ -71,4 +71,4 @@
 
 ### 预告
 
-下一章将探索进阶技术与架构，包括 Agentic RAG、Graph RAG、自适应上下文管理和长上下文模型应用等前沿方向。
+下一章将探索进阶技术与架构，包括 Agentic [RAG](../05_select/5.1_rag_principles.md)、Graph RAG、自适应上下文管理和长上下文模型应用等前沿方向。

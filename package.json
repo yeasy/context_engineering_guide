@@ -6,6 +6,7 @@
     "init": "honkit init",
     "build": "honkit build",
     "serve": "honkit serve",
+    "start": "honkit serve",
     "clean": "rimraf _book",
     "pdf": "honkit pdf ./ ./context_engineering_guide.pdf"
   },

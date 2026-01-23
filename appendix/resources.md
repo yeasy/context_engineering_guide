@@ -46,9 +46,9 @@
 ### 核心论文
 
 - **Attention Is All You Need** (2017) - Transformer 架构
-- **Retrieval-Augmented Generation** (2020) - RAG 原论文
+- **Retrieval-Augmented Generation** (2020) - [RAG](../05_select/5.1_rag_principles.md) 原论文
 - **Chain-of-Thought Prompting** (2022) - 思维链
-- **ReAct** (2022) - 推理与行动结合
+- **[ReAct](../09_agents/9.1_agent_architecture.md)** (2022) - 推理与行动结合
 
 ### 推荐阅读平台
 

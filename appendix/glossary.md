@@ -8,8 +8,8 @@
 
 ### A
 
-**Agentic RAG（自主型 RAG）**  
-智能体自主决定检索时机、策略和内容的检索增强生成模式。
+**Agentic [RAG](../05_select/5.1_rag_principles.md)（自主型 RAG）**  
+智能体自主决定检索时机、策略和内容的[检索增强生成](../05_select/5.1_rag_principles.md)模式。
 
 **ANN（近似最近邻）**  
 Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的算法。
@@ -85,7 +85,7 @@ Anthropic 提出的 AI 模型与外部工具交互的标准协议。
 **RAG（检索增强生成）**  
 Retrieval-Augmented Generation，结合信息检索与语言模型生成的技术。
 
-**ReAct**  
+**[ReAct](../09_agents/9.1_agent_architecture.md)**  
 Reason + Act，结合推理和行动的智能体运行模式。
 
 **Reranking（重排序）**  
