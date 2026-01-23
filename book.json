@@ -1,0 +1,30 @@
+{
+    "title": "大模型上下文工程权威指南",
+    "description": "Context Engineering: The Definitive Guide - 从理论到实践，掌握 AI 时代最核心的工程能力",
+    "author": "yeasy",
+    "language": "zh-hans",
+    "plugins": [
+        "-highlight",
+        "prism",
+        "mermaid-gb3",
+        "chapter-fold",
+        "back-to-top-button",
+        "code",
+        "splitter",
+        "page-toc-button"
+    ],
+    "pluginsConfig": {
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "mermaid-gb3": {
+            "theme": "default"
+        },
+        "page-toc-button": {
+            "maxTocDepth": 3,
+            "minTocSize": 2
+        }
+    }
+}

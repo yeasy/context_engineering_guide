@@ -1,11 +1,12 @@
 {
-  "name": "context_engineering_guide",
+  "name": "context-engineering-guide",
   "version": "1.0.0",
-  "description": "Context Engineering Guide - A comprehensive guide for context engineering in AI applications",
+  "description": "Context Engineering Guide - 从理论到实践，掌握 AI 时代最核心的工程能力",
   "scripts": {
     "init": "honkit init",
     "build": "honkit build",
     "serve": "honkit serve",
+    "clean": "rimraf _book",
     "pdf": "honkit pdf ./ ./context_engineering_guide.pdf"
   },
   "repository": {
@@ -13,15 +14,22 @@
     "url": "git+https://github.com/yeasy/context_engineering_guide.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "yeasy",
+  "license": "CC-BY-NC-SA-4.0",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/yeasy/context_engineering_guide/issues"
   },
   "homepage": "https://github.com/yeasy/context_engineering_guide#readme",
   "devDependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-chapter-fold": "^0.0.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "gitbook-plugin-page-toc-button": "^0.1.1",
+    "gitbook-plugin-splitter": "^0.0.8",
     "honkit": "^6.1.4",
-    "honkit-plugin-mermaid": "^0.1.4"
+    "honkit-plugin-prism": "^2.5.4",
+    "rimraf": "^6.0.1"
   }
 }
