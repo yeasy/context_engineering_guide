@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 大模型上下文工程权威指南
+# 大模型上下文工程权威指南
 
 ### Context Engineering: The Definitive Guide
 
