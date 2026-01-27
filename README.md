@@ -13,8 +13,9 @@
 
 [📖 开始阅读](#-快速开始) · [🌟 核心内容](#-核心内容) · [👥 适合谁读](#-目标读者) · [🤝 参与贡献](#-参与贡献)
 
-</div>
+<img src="cover.jpg" width="300" alt="Context Engineering Guide Cover">
 
+</div>
 ---
 
 ## 💡 为什么需要这本书？

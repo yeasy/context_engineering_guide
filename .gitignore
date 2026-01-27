@@ -23,3 +23,5 @@ yarn-error.log*
 # Agent
 .agent/
 .gemini/
+
+.obsidian/
