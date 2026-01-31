@@ -73,11 +73,23 @@
 
 **特点**：嵌入式、简单易用、适合原型开发
 
-### pgvector
+### PostgreSQL (pgvector)
 
-**类型**：PostgreSQL 扩展
+**类型**：开源扩展
 
-**特点**：与现有 PG 基础设施集成
+**特点**：与现有 PG 基础设施集成、生态成熟
+
+### Oracle Database 23ai
+
+**类型**：商业/云服务
+
+**特点**：原生 AI 向量搜索、企业级安全与高可用
+
+### MySQL (8.0+ / HeatWave)
+
+**类型**：开源/云服务
+
+**特点**：全球最流行的开源数据库原生支持向量
 
 ---
 
@@ -154,5 +166,5 @@ LangChain 配套的追踪和监控平台。
 |------|----------|
 | 快速原型 | LangChain + Chroma |
 | 生产部署 | LlamaIndex/LangChain + Pinecone/Milvus |
-| 企业集成 | pgvector + 现有基础设施 |
+| 企业集成 | 融合数据库 (Oracle/PG/MySQL) |
 | 研究实验 | 开源模型 + 开源数据库 |
