@@ -31,7 +31,20 @@
 
 - **OpenAI Blog**：https://openai.com/blog
 - **Anthropic Research**：https://www.anthropic.com/research
+- **Anthropic Engineering Blog**：https://www.anthropic.com/engineering ⭐ *上下文工程核心参考*
 - **Google AI Blog**：https://blog.research.google
+
+### 上下文工程专题文章
+
+以下是对本书内容有重要参考价值的官方文章：
+
+| 文章 | 来源 | 相关章节 |
+|------|------|----------|
+| Effective context engineering for AI agents | Anthropic | 第3、6、9章 |
+| Writing effective tools for agents | Anthropic | 第8章 |
+| Introducing advanced tool use | Anthropic | 第8章 |
+| Building effective agents | Anthropic | 第9章 |
+| Multi-agent research system | Anthropic | 第9章 |
 
 ### 技术社区
 

@@ -1,12 +1,14 @@
-# 附录 B：常用工具与框架
+# 附录 B：工具与技术生态
 
-本附录介绍上下文工程实践中常用的工具和框架。
+本附录汇集上下文工程领域的常用工具、框架、数据集与测评基准。
 
 ---
 
-## RAG 框架
+## 开发框架
 
-### LangChain
+### 编排与构建
+
+#### LangChain
 
 **简介**：最流行的 LLM 应用开发框架之一，提供全面的 [RAG](../05_select/5.1_rag_principles.md) 支持。
 
@@ -17,7 +19,7 @@
 
 **官网**：https://langchain.com
 
-### LlamaIndex
+#### LlamaIndex
 
 **简介**：专注于数据索引和检索的 LLM 框架。
 
@@ -28,7 +30,7 @@
 
 **官网**：https://llamaindex.ai
 
-### Haystack
+#### Haystack
 
 **简介**：端到端 NLP 框架，支持构建完整的 RAG 管道。
 
@@ -38,6 +40,24 @@
 - 评估工具集成
 
 **官网**：https://haystack.deepset.ai
+
+### 智能体框架
+
+#### LangGraph
+
+**简介**：LangChain 体系下基于图的有状态多智能体编排框架。
+
+**特点**：
+- 精细的循环控制
+- 强大的状态持久化能力
+
+#### AutoGen
+
+**简介**：微软推出的多智能体对话框架。
+
+**特点**：
+- 强大的代码执行能力
+- 灵活的群聊模式
 
 ---
 
@@ -113,19 +133,39 @@
 
 ---
 
-## 评估工具
+## 评估与基准
 
-### RAGAS
+### 评估工具
 
-评估 RAG 系统质量的自动化框架。
+#### RAGAS
 
-### TruLens
+**简介**：评估 RAG 系统质量的自动化框架。
 
-RAG 应用的监控和评估平台。
+**指标**：忠实度 (Faithfulness)、答案相关性 (Answer Relevancy)、上下文召回率 (Context Recall)。
 
-### DeepEval
+#### TruLens
 
-LLM 应用的评估框架。
+**简介**：RAG 应用的监控和评估平台，提供 RAG 三元组 (Triad) 可视化。
+
+#### DeepEval
+
+**简介**：LLM 应用的评估框架。
+
+### 性能基准测试
+
+- **Needle In A Haystack**: 长上下文召回能力的标准测试套件。
+- **Massive Text Embedding Benchmark (MTEB)**: 文本嵌入模型的权威排行榜。
+
+---
+
+## 公共数据集
+
+### RAG 训练与测试
+- **MS MARCO**: 微软的大规模阅读理解数据集，检索任务的黄金标准。
+- **HotpotQA**: 多跳推理问答数据集，用于测试复杂 RAG 能力。
+
+### 长上下文
+- **LongBench**: 多任务长文本理解基准（包含了摘要、QA、代码补全）。
 
 ---
 

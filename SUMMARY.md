@@ -44,7 +44,7 @@
 
 * [第六章：上下文压缩与优化](06_compress/README.md)
   * [6.1 信息密度与压缩原理](06_compress/6.1_compression_principles.md)
-  * [6.2 摘要与提取技术](06_compress/6.2_summarization.md)
+  * [6.2 摘要与信息提取](06_compress/6.2_summarization.md)
   * [6.3 对话历史管理](06_compress/6.3_conversation_history.md)
   * [6.4 上下文窗口优化策略](06_compress/6.4_window_optimization.md)
   * [本章小结](06_compress/summary.md)
@@ -56,7 +56,7 @@
   * [7.4 多任务上下文隔离](07_isolate/7.4_task_isolation.md)
   * [本章小结](07_isolate/summary.md)
 
-## 第三部分：实践方法与最佳实践
+## 第三部分：实战与最佳实践
 
 * [第八章：工具调用与能力扩展](08_tools/README.md)
   * [8.1 函数调用机制](08_tools/8.1_function_calling.md)
@@ -77,7 +77,7 @@
   * [10.2 性能优化与成本控制](10_production/10.2_optimization.md)
   * [10.3 可观测性与调试](10_production/10.3_observability.md)
   * [10.4 安全性与治理](10_production/10.4_security.md)
-  * [10.5 常见问题与解决方案](10_production/10.5_troubleshooting.md)
+  * [10.5 故障排查与问题诊断](10_production/10.5_troubleshooting.md)
   * [本章小结](10_production/summary.md)
 
 ## 第四部分：进阶与展望
@@ -99,5 +99,5 @@
 ## 附录
 
 * [附录 A：术语表](appendix/glossary.md)
-* [附录 B：常用工具与框架](appendix/tools.md)
+* [附录 B：工具与技术生态](appendix/tools.md)
 * [附录 C：参考资源](appendix/resources.md)
