@@ -14,10 +14,17 @@
 **ANN（近似最近邻）**  
 Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的算法。
 
+
 ### C
 
+**Chain of Thought (CoT)**  
+一种提示策略，引导模型在给出最终答案前生成推理步骤。
+
 **Chunking（分块）**  
-将长文档切分为较小片段的过程，是 RAG 系统的关键步骤。
+将大文档切分为小片段的过程，是 RAG 系统的关键步骤。
+
+**Compaction（紧凑化）**  
+当上下文接近上限时，将历史记录压缩为摘要的技术，类似“垃圾回收”机制。
 
 **Context Engineering（上下文工程）**  
 设计、组织、优化和管理大语言模型信息环境的系统性工程学科。
@@ -38,10 +45,19 @@ Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的�
 
 ### F
 
+**Fine-tuning（微调）**  
+在预训练模型基础上，使用特定领域数据进行进一步训练及优化。
+
+**Few-shot Learning（少样本学习）**  
+通过在提示词中提供少量示例，让模型学习并执行特定任务。
+
 **Function Calling（函数调用）**  
 模型生成结构化函数调用请求的能力，用于与外部工具交互。
 
 ### G
+
+**Grounding（基座/接地）**  
+将模型的生成内容限制在特定事实源或知识库范围内，以减少幻觉。
 
 **Graph RAG（图检索增强生成）**  
 结合知识图谱进行检索和推理的 RAG 变体。
@@ -54,8 +70,16 @@ Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的�
 **HNSW**  
 Hierarchical Navigable Small World，高效的向量索引算法。
 
+**HyDE（假设文档嵌入）**  
+Hypothetical Document Embedding，一种先用 LLM 生成假设答案再用其嵌入向量检索的技术。
+
 **Hybrid Search（混合检索）**  
 结合语义检索和关键词检索的混合方法。
+
+### I
+
+**ICAE（上下文自动编码器）**  
+In-context Autoencoder，将长文本压缩为软提示词的技术。
 
 ### K
 
@@ -67,6 +91,9 @@ Key-Value 缓存，存储生成过程中 Token 的键值向量以避免重复计
 **LLM（大语言模型）**  
 Large Language Model，基于 Transformer 架构的大规模预训练语言模型。
 
+**Lost in the Middle（中段迷失）**  
+大模型在处理长上下文时，容易忽略位于输入中间部分信息的现象。
+
 ### M
 
 **MCP（Model Context Protocol）**  
@@ -75,7 +102,15 @@ Anthropic 提出的 AI 模型与外部工具交互的标准协议。
 **Memory Architecture（记忆架构）**  
 组织和管理 AI 系统记忆的多层次结构设计。
 
+### N
+
+**Needle in a Haystack（大海捞针）**  
+一种评估大模型长上下文能力的测试方法，检测模型能否从大量无关信息中提取关键事实。
+
 ### P
+
+**Prompt Chaining（提示链）**  
+将复杂的任务分解为多个步骤，通过一系列关联的提示词依次引导模型完成。
 
 **Prompt Engineering（提示词工程）**  
 设计和优化输入给模型的文本指令的技术，是上下文工程的子集。
@@ -125,3 +160,8 @@ Reciprocal Rank Fusion，融合多个检索结果排序的算法。
 
 **Working Memory（工作记忆）**  
 对应上下文窗口，存储当前任务即时信息的短期记忆。
+
+### Z
+
+**Zero-shot Learning（零样本学习）**  
+模型在没有任何示例的情况下，仅凭指令完成任务的能力。

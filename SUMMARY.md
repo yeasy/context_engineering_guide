@@ -47,6 +47,7 @@
   * [6.2 摘要与信息提取](06_compress/6.2_summarization.md)
   * [6.3 对话历史管理](06_compress/6.3_conversation_history.md)
   * [6.4 上下文窗口优化策略](06_compress/6.4_window_optimization.md)
+  * [6.5 压缩策略案例分析](06_compress/6.5_compression_cases.md)
   * [本章小结](06_compress/summary.md)
 
 * [第七章：上下文隔离与结构化](07_isolate/README.md)
@@ -54,9 +55,10 @@
   * [7.2 XML 标签与指令分层](07_isolate/7.2_xml_tags.md)
   * [7.3 系统提示词设计](07_isolate/7.3_system_prompts.md)
   * [7.4 多任务上下文隔离](07_isolate/7.4_task_isolation.md)
+  * [7.5 隔离策略案例分析](07_isolate/7.5_isolation_cases.md)
   * [本章小结](07_isolate/summary.md)
 
-## 第三部分：实战与最佳实践
+## 第三部分：进阶技术与架构
 
 * [第八章：工具调用与能力扩展](08_tools/README.md)
   * [8.1 函数调用机制](08_tools/8.1_function_calling.md)
@@ -72,32 +74,57 @@
   * [9.4 智能体记忆与学习](09_agents/9.4_agent_memory.md)
   * [本章小结](09_agents/summary.md)
 
-* [第十章：生产环境最佳实践](10_production/README.md)
-  * [10.1 上下文工程工作流](10_production/10.1_workflow.md)
-  * [10.2 性能优化与成本控制](10_production/10.2_optimization.md)
-  * [10.3 可观测性与调试](10_production/10.3_observability.md)
-  * [10.4 安全性与治理](10_production/10.4_security.md)
-  * [10.5 故障排查与问题诊断](10_production/10.5_troubleshooting.md)
-  * [本章小结](10_production/summary.md)
+* [第十章：进阶 RAG 与自适应上下文](10_advanced/README.md)
+  * [10.1 Agentic RAG 与自主检索](10_advanced/10.1_agentic_rag.md)
+  * [10.2 Graph RAG 与知识图谱](10_advanced/10.2_graph_rag.md)
+  * [10.3 自适应上下文管理](10_advanced/10.3_adaptive_context.md)
+  * [10.4 长上下文模型应用](10_advanced/10.4_long_context.md)
+  * [10.5 多模态上下文管理](10_advanced/10.5_multimodal_context.md)
+  * [本章小结](10_advanced/summary.md)
 
-## 第四部分：进阶与展望
+* [第十一章：反模式与常见陷阱](11_antipatterns/README.md)
+  * [11.1 过度压缩与信息丢失](11_antipatterns/11.1_over_compression.md)
+  * [11.2 上下文污染与隔离失效](11_antipatterns/11.2_context_pollution.md)
+  * [11.3 检索失败与相关性陷阱](11_antipatterns/11.3_retrieval_failures.md)
+  * [本章小结](11_antipatterns/summary.md)
 
-* [第十一章：进阶技术与架构](11_advanced/README.md)
-  * [11.1 Agentic RAG 与自主检索](11_advanced/11.1_agentic_rag.md)
-  * [11.2 Graph RAG 与知识图谱](11_advanced/11.2_graph_rag.md)
-  * [11.3 自适应上下文管理](11_advanced/11.3_adaptive_context.md)
-  * [11.4 长上下文模型应用](11_advanced/11.4_long_context.md)
-  * [本章小结](11_advanced/summary.md)
+## 第四部分：工程实战与未来演进
 
-* [第十二章：未来展望与发展趋势](12_future/README.md)
-  * [12.1 上下文工程的技术演进](12_future/12.1_tech_evolution.md)
-  * [12.2 行业应用趋势](12_future/12.2_industry_trends.md)
-  * [12.3 挑战与机遇](12_future/12.3_challenges.md)
-  * [12.4 成为上下文工程专家](12_future/12.4_becoming_expert.md)
-  * [本章小结](12_future/summary.md)
+* [第十二章：生产环境最佳实践](12_production/README.md)
+  * [12.1 上下文工程工作流](12_production/12.1_workflow.md)
+  * [12.2 性能优化与成本控制](12_production/12.2_optimization.md)
+  * [12.3 可观测性与调试](12_production/12.3_observability.md)
+  * [12.4 安全性与治理](12_production/12.4_security.md)
+  * [12.5 故障排查与问题诊断](12_production/12.5_troubleshooting.md)
+  * [本章小结](12_production/summary.md)
+
+* [第十三章：行业应用案例](13_cases/README.md)
+  * [13.1 医疗：电子病历智能问答](13_cases/13.1_medical.md)
+  * [13.2 金融：智能风控知识库](13_cases/13.2_financial.md)
+  * [13.3 法律：合同审查助手](13_cases/13.3_legal.md)
+  * [13.4 教育：个性化助教系统](13_cases/13.4_education.md)
+  * [13.5 案例分析：Manus AI 的全自主智能体架构](13_cases/13.5_manus_agent.md)
+  * [本章小结](13_cases/summary.md)
+
+* [第十四章：综合实战 - 构建企业知识库问答系统](14_practice/README.md)
+  * [14.1 项目需求与架构设计](14_practice/14.1_requirements.md)
+  * [14.2 知识库构建与向量化](14_practice/14.2_knowledge_base.md)
+  * [14.3 检索系统实现](14_practice/14.3_retrieval.md)
+  * [14.4 对话历史管理](14_practice/14.4_history.md)
+  * [14.5 性能优化与部署](14_practice/14.5_optimization.md)
+  * [14.6 持续迭代与改进](14_practice/14.6_iteration.md)
+  * [本章小结](14_practice/summary.md)
+
+* [第十五章：未来展望与发展趋势](15_future/README.md)
+  * [15.1 上下文工程的技术演进](15_future/15.1_tech_evolution.md)
+  * [15.2 行业应用趋势](15_future/15.2_industry_trends.md)
+  * [15.3 挑战与机遇](15_future/15.3_challenges.md)
+  * [15.4 成为上下文工程专家](15_future/15.4_becoming_expert.md)
+  * [本章小结](15_future/summary.md)
 
 ## 附录
 
 * [附录 A：术语表](appendix/glossary.md)
 * [附录 B：工具与技术生态](appendix/tools.md)
 * [附录 C：参考资源](appendix/resources.md)
+* [附录 D：参考文献](appendix/references.md)
