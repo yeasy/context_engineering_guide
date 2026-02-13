@@ -40,11 +40,11 @@
 
 | 文章 | 来源 | 相关章节 |
 |------|------|----------|
-| Effective context engineering for AI agents | Anthropic | 第3、6、9章 |
-| Writing effective tools for agents | Anthropic | 第8章 |
-| Introducing advanced tool use | Anthropic | 第8章 |
-| Building effective agents | Anthropic | 第9章 |
-| Multi-agent research system | Anthropic | 第9章 |
+| Effective context engineering for AI agents | Anthropic | 第 3、6、9 章 |
+| Writing effective tools for agents | Anthropic | 第 8 章 |
+| Introducing advanced tool use | Anthropic | 第 8 章 |
+| Building effective agents | Anthropic | 第 9 章 |
+| Multi-agent research system | Anthropic | 第 9 章 |
 
 ### 技术社区
 
