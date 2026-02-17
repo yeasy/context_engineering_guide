@@ -105,7 +105,7 @@
 
 ## 社区资源
 
-### Discord/Slack 社区
+### 即时通讯社区
 
 - LangChain Discord
 - Weaviate Slack

@@ -35,6 +35,11 @@ Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的�
 **Cross-Encoder（交叉编码器）**  
 将查询和文档同时输入模型进行相关性评分的重排序技术。
 
+### D
+
+**DLP（数据防泄漏）**  
+Data Loss Prevention，一类用于识别、拦截或审计敏感数据外泄的数据安全技术与流程，常用于对 LLM 请求/响应与日志做脱敏与拦截。
+
 ### E
 
 **Embedding（嵌入）**  
@@ -68,7 +73,7 @@ Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的�
 模型生成与事实不符或缺乏依据的内容的现象。
 
 **HNSW**  
-Hierarchical Navigable Small World，高效的向量索引算法。
+Hierarchical Navigable Small World，分层可导航小世界图，一种高效的近似最近邻（ANN）向量索引算法。
 
 **HyDE（假设文档嵌入）**  
 Hypothetical Document Embedding，一种先用 LLM 生成假设答案再用其嵌入向量检索的技术。
@@ -80,6 +85,9 @@ Hypothetical Document Embedding，一种先用 LLM 生成假设答案再用其�
 
 **ICAE（上下文自动编码器）**  
 In-context Autoencoder，将长文本压缩为软提示词的技术。
+
+**IVF（倒排文件索引）**  
+Inverted File Index，一种基于聚类的近似最近邻索引方法，常与 PQ 组合为 IVF-PQ。
 
 ### K
 
@@ -96,18 +104,30 @@ Large Language Model，基于 Transformer 架构的大规模预训练语言模�
 
 ### M
 
+**MTEB（大规模文本嵌入基准）**  
+Massive Text Embedding Benchmark，用于评测与对比嵌入模型能力的公开基准与排行榜体系。
+
 **MCP（Model Context Protocol）**  
 Anthropic 提出的 AI 模型与外部工具交互的标准协议。
 
 **Memory Architecture（记忆架构）**  
 组织和管理 AI 系统记忆的多层次结构设计。
 
+**MMR（最大边际相关性）**  
+Maximal Marginal Relevance，一种在“相关性”和“多样性”之间权衡的结果选择策略，常用于检索结果去重与多样化。
+
 ### N
+
+**NIAH（大海捞针）**  
+Needle in a Haystack，一种评估大模型长上下文能力的测试方法，检测模型能否从大量无关信息中提取关键事实。
 
 **Needle in a Haystack（大海捞针）**  
 一种评估大模型长上下文能力的测试方法，检测模型能否从大量无关信息中提取关键事实。
 
 ### P
+
+**PQ（乘积量化）**  
+Product Quantization，一种向量有损压缩与近似距离计算方法，常用于降低内存占用并加速相似度搜索。
 
 **Prompt Chaining（提示链）**  
 将复杂的任务分解为多个步骤，通过一系列关联的提示词依次引导模型完成。
@@ -119,6 +139,9 @@ Anthropic 提出的 AI 模型与外部工具交互的标准协议。
 
 **RAG（检索增强生成）**  
 Retrieval-Augmented Generation，结合信息检索与语言模型生成的技术。
+
+**RULER（长上下文评测基准）**  
+一类面向长上下文能力的评测基准集合，通常覆盖检索、聚合、跟踪等多种长上下文任务类型。
 
 **[ReAct](../09_agents/9.1_agent_architecture.md)**  
 Reason + Act，结合推理和行动的智能体运行模式。
@@ -140,7 +163,13 @@ Reciprocal Rank Fusion，融合多个检索结果排序的算法。
 **System Prompt（系统提示词）**  
 定义模型基本角色和行为的核心指令。
 
+**SLO（服务等级目标）**  
+Service Level Objective，用于定义系统可量化目标的工程指标（如 P95 延迟、错误率、可用性），常与告警与发布门禁联动。
+
 ### T
+
+**TTFT（首字延迟）**  
+Time To First Token，从请求发出到生成首个 Token 的时间，用于衡量端到端“体感延迟”与流式输出体验。
 
 **Token**  
 大语言模型处理文本的基本单位。

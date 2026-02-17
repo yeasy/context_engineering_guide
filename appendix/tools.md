@@ -93,19 +93,19 @@
 
 **特点**：嵌入式、简单易用、适合原型开发
 
-### PostgreSQL (pgvector)
+### PostgreSQL：pgvector
 
 **类型**：开源扩展
 
 **特点**：与现有 PG 基础设施集成、生态成熟
 
-### Oracle Database 23ai
+### Oracle 数据库 23ai
 
 **类型**：商业/云服务
 
 **特点**：原生 AI 向量搜索、企业级安全与高可用
 
-### MySQL (8.0+ / HeatWave)
+### MySQL：8.0+ / HeatWave
 
 **类型**：开源/云服务
 

@@ -1,4 +1,4 @@
-# Summary
+# 目录
 
 * [前言](README.md)
 
@@ -64,7 +64,7 @@
   * [8.1 函数调用机制](08_tools/8.1_function_calling.md)
   * [8.2 工具定义与设计](08_tools/8.2_tool_design.md)
   * [8.3 工具执行与结果处理](08_tools/8.3_tool_execution.md)
-  * [8.4 MCP 协议与工具标准化](08_tools/8.4_mcp_protocol.md)
+  * [8.4 模型上下文协议与工具标准化](08_tools/8.4_mcp_protocol.md)
   * [本章小结](08_tools/summary.md)
 
 * [第九章：智能体上下文管理](09_agents/README.md)
@@ -75,7 +75,7 @@
   * [本章小结](09_agents/summary.md)
 
 * [第十章：进阶技术与架构](10_advanced/README.md)
-  * [10.1 Agentic RAG 与自主检索](10_advanced/10.1_agentic_rag.md)
+  * [10.1 自主检索增强生成与自主检索](10_advanced/10.1_agentic_rag.md)
   * [10.2 Graph RAG 与知识图谱](10_advanced/10.2_graph_rag.md)
   * [10.3 自适应上下文管理](10_advanced/10.3_adaptive_context.md)
   * [10.4 长上下文模型应用](10_advanced/10.4_long_context.md)

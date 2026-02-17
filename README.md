@@ -2,8 +2,6 @@
 
 # 大模型上下文工程权威指南
 
-## Context Engineering: The Definitive Guide
-
 **从理论到实践，掌握 AI 时代最核心的工程能力**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -27,7 +25,7 @@
 
 上下文工程解决的核心问题是：
 
-```
+```text
 如何在正确的时间，将正确的信息，以正确的格式，提供给模型？
 ```
 
@@ -157,7 +155,7 @@ npx honkit serve   # 启动本地服务
 
 ### 阅读建议
 
-```
+```text
 📕 初学者：按顺序阅读全书
 📗 有经验者：重点阅读第二、三部分
 📘 快速参考：阅读每章末尾的"本章小结"
@@ -167,7 +165,7 @@ npx honkit serve   # 启动本地服务
 
 ## 📚 目录概览
 
-```
+```text
 第一部分：认识上下文工程
 ├── 第1章：上下文工程概述
 ├── 第2章：大语言模型基础
