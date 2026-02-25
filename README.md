@@ -6,17 +6,17 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.01-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.02-blue)
 [![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context-engineering-guide)
 
-[📖 开始阅读](#-快速开始) · [🌟 核心内容](#-核心内容) · [👥 适合谁读](#-目标读者) · [🤝 参与贡献](#-参与贡献)
+[开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
 
 <img src="cover.jpg" width="300" alt="Context Engineering Guide Cover">
 
 </div>
 ---
 
-## 💡 为什么需要这本书？
+## 为什么需要这本书？
 
 > “提示词工程已死，上下文工程永生。”  
 > — 2026
@@ -33,23 +33,24 @@
 
 ---
 
-## 🌟 核心内容
+## 核心内容
 
 <table>
 <tr>
 <td width="50%">
 
-### 📚 第一部分：认识上下文工程
+### 第一部分：认识上下文工程
 - 上下文工程的定义与价值
 - 从提示词工程到上下文工程的演进
 - LLM 基础：上下文窗口与 Token
+- 理论框架：四大原则与核心策略
 
 </td>
 <td width="50%">
 
-### 🔧 第二部分：四大核心策略
+### 第二部分：核心技术与策略
 - **Write** — 外部存储与记忆架构
-- **Select** — [RAG](05_select/5.1_rag_principles.md) 与[检索增强生成](05_select/5.1_rag_principles.md)
+- **Select** — RAG 与检索增强生成
 - **Compress** — 摘要与上下文压缩
 - **Isolate** — 结构化与隔离设计
 
@@ -58,29 +59,24 @@
 <tr>
 <td width="50%">
 
-### 🚀 第三部分：实践方法
-- 工具调用与 MCP 协议
+### 第三部分：进阶技术与架构
+- 工具调用与能力扩展
 - 智能体上下文管理
-- 生产环境最佳实践
+- 自主检索增强生成 (Agentic RAG)
+- 长上下文模型应用
+- 多模态上下文管理
+- 上下文工程反模式
 
 </td>
 <td width="50%">
 
-### 🔮 第四部分：进阶与架构
-- Agentic RAG 与 Graph RAG
-- 长上下文模型应用
-- 多模态上下文管理
-
-</td>
-</tr>
-<tr>
-<td colspan="2">
-
-### 🏭 第五部分：案例与展望
-- 行业应用案例（医疗、金融、法律、教育）
-- 综合实战项目
-- 反模式与常见错误
-- 未来发展趋势
+### 第四部分：工程实战与未来演进
+- 生产环境的最佳实践
+- 真实系统架构案例分析
+- 项目实战体验
+- 基础设施与未来前瞻
+- 附录 A：评估指标体系
+- 附录 B：工具与技术生态
 
 </td>
 </tr>
@@ -88,7 +84,7 @@
 
 ---
 
-## 🎯 你将学到什么
+## 你将学到什么
 
 ```mermaid
 graph LR
@@ -120,7 +116,7 @@ graph LR
 
 ---
 
-## 👥 目标读者
+## 目标读者
 
 本书适合以下读者：
 
@@ -136,7 +132,7 @@ graph LR
 
 ---
 
-## 📖 快速开始
+## 快速开始
 
 ### 在线阅读
 
@@ -163,7 +159,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## 📚 目录概览
+## 目录概览
 
 ```text
 第一部分：认识上下文工程
@@ -191,7 +187,7 @@ npx honkit serve   # 启动本地服务
 
 附录
 ├── 附录A：术语表
-├── 附录B：常用工具与框架
+├── 附录B：工具与技术生态
 ├── 附录C：参考资源
 └── 附录D：参考文献
 ```
@@ -200,7 +196,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## ✨ 本书特色
+## 本书特色
 
 | 特色 | 说明 |
 |------|------|
@@ -211,7 +207,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## 🤝 参与贡献
+## 参与贡献
 
 欢迎贡献！您可以通过以下方式参与：
 
@@ -221,7 +217,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## 📜 许可证
+## 许可证
 
 本书采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可证。
 
@@ -229,7 +225,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## 📝 项目规则
+## 项目规则
 
 为了保持书稿的专业性和一致性，本项目遵循以下规则：
 
@@ -239,7 +235,7 @@ npx honkit serve   # 启动本地服务
 
 ---
 
-## 🙏 致谢
+## 致谢
 
 感谢所有为大模型技术发展做出贡献的研究者与工程师，特别是：
 

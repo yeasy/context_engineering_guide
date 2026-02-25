@@ -39,7 +39,7 @@
   * [5.2 文档分块策略](05_select/5.2_chunking.md)
   * [5.3 嵌入模型与语义搜索](05_select/5.3_embeddings.md)
   * [5.4 重排序与相关性优化](05_select/5.4_reranking.md)
-  * [5.5 混合检索策略：关键词与语义融合](05_select/5.5_hybrid_search.md)
+  * [5.5 混合检索与高级检索增强生成](05_select/5.5_hybrid_search.md)
   * [本章小结](05_select/summary.md)
 
 * [第六章：上下文压缩与优化](06_compress/README.md)
