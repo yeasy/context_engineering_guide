@@ -31,6 +31,8 @@
 
 这本书将带你系统掌握这门 AI 时代最核心的工程能力。
 
+> 💡 **本书与提示词工程的关系**：[《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) 聚焦于单次交互中的提示词设计技巧；而本书则关注更宏观的系统层面——如何通过 RAG、记忆架构、工具调用和上下文压缩等工程手段，在生产环境中持续为模型提供高质量的上下文。建议先阅读提示词工程作为基础，再深入本书的上下文工程体系。
+
 ---
 
 ## 核心内容
@@ -204,6 +206,21 @@ npx honkit serve   # 启动本地服务
 | 🔬 **理论与实践并重** | 原理剖析 + 代码示例 + 最佳实践 |
 | 🆕 **紧跟前沿** | 涵盖 2026 年最新技术进展（Agentic RAG、Graph RAG、MCP 等） |
 | 📊 **图文并茂** | Mermaid 流程图 + 表格对比 + 结构化示例 |
+
+---
+
+## 推荐阅读
+
+本书是 AI 技术丛书的一部分。以下书籍与本书形成互补：
+
+| 书名 | 与本书的关系 |
+|------|------------|
+| [《零基础学 AI》](https://github.com/yeasy/ai_beginner_guide) | AI 零基础入门，适合缺乏 AI 背景的读者 |
+| [《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) | 提示词设计基础，本书的前置读物 |
+| [《Claude 技术指南》](https://github.com/yeasy/claude_guide) | Claude 的 MCP 协议与工具使用实践 |
+| [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 智能体的上下文管理是本书技术的核心应用场景 |
+| [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
+| [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
 
 ---
 
