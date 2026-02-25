@@ -21,7 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Agent
-.agents/
+.agent/
 .gemini/
 
 .obsidian/
