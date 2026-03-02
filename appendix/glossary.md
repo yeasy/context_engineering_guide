@@ -118,10 +118,7 @@ Maximal Marginal Relevance，一种在“相关性”和“多样性”之间权
 
 ### N
 
-**NIAH（大海捞针）**  
-Needle in a Haystack，一种评估大模型长上下文能力的测试方法，检测模型能否从大量无关信息中提取关键事实。
-
-**Needle in a Haystack（大海捞针）**  
+**Needle in a Haystack（NIAH，大海捞针）**  
 一种评估大模型长上下文能力的测试方法，检测模型能否从大量无关信息中提取关键事实。
 
 ### P
