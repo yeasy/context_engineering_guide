@@ -10,4 +10,5 @@
 - [2.2 上下文窗口的本质](2.2_context_window.md)
 - [2.3 Token 与上下文限制](2.3_tokens.md)
 - [2.4 主流模型的上下文能力对比](2.4_model_comparison.md)
+- [2.5 State Space Model 与 Transformer 的比较](2.5_ssm_vs_transformer.md)
 - [本章小结](summary.md)
