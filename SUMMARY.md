@@ -16,6 +16,7 @@
   * [2.2 上下文窗口的本质](02_llm_basics/2.2_context_window.md)
   * [2.3 Token 与上下文限制](02_llm_basics/2.3_tokens.md)
   * [2.4 主流模型的上下文能力对比](02_llm_basics/2.4_model_comparison.md)
+  * [2.5 SSM vs Transformer 在上下文工程中的对比](02_llm_basics/2.5_ssm_vs_transformer.md)
   * [本章小结](02_llm_basics/summary.md)
 
 * [第三章 上下文工程的理论框架](03_framework/README.md)
@@ -23,6 +24,7 @@
   * [3.2 四大核心策略概览](03_framework/3.2_four_strategies.md)
   * [3.3 上下文质量评估](03_framework/3.3_quality_metrics.md)
   * [3.4 上下文工程方法论](03_framework/3.4_methodology.md)
+  * [3.5 上下文管理的量化评估方法](03_framework/3.5_quantitative_evaluation.md)
   * [本章小结](03_framework/summary.md)
 
 ## 第二部分：核心技术与策略
@@ -72,6 +74,7 @@
   * [9.2 单智能体上下文管理](09_agents/9.2_single_agent.md)
   * [9.3 多智能体上下文传递](09_agents/9.3_multi_agent.md)
   * [9.4 智能体记忆与学习](09_agents/9.4_agent_memory.md)
+  * [9.5 智能体上下文管理的高级主题](09_agents/9.5_advanced_agent_context.md)
   * [本章小结](09_agents/summary.md)
 
 * [第十章 进阶技术与架构](10_advanced/README.md)
@@ -80,6 +83,8 @@
   * [10.3 自适应上下文管理](10_advanced/10.3_adaptive_context.md)
   * [10.4 长上下文模型应用](10_advanced/10.4_long_context.md)
   * [10.5 多模态上下文管理](10_advanced/10.5_multimodal_context.md)
+  * [10.6 Graph RAG 失败案例分析](10_advanced/10.6_graph_rag_failures.md)
+  * [10.7 多模态上下文安全策略](10_advanced/10.7_multimodal_context_security.md)
   * [本章小结](10_advanced/summary.md)
 
 * [第十一章 反模式与常见错误](11_antipatterns/README.md)
@@ -93,8 +98,11 @@
 * [第十二章 生产环境最佳实践](12_production/README.md)
   * [12.1 上下文工程工作流](12_production/12.1_workflow.md)
   * [12.2 性能优化与成本控制](12_production/12.2_optimization.md)
+    * [12.2.1 成本建模与 ROI 分析框架](12_production/12.2.1_cost_modeling_roi.md)
+    * [12.2.2 成本优化的具体行业数据](12_production/12.2.2_cost_optimization_industry.md)
   * [12.3 可观测性与调试](12_production/12.3_observability.md)
   * [12.4 安全性与治理](12_production/12.4_security.md)
+    * [12.4.1 上下文工程中的安全与合规](12_production/12.4.1_security_compliance.md)
   * [12.5 故障排查与问题诊断](12_production/12.5_troubleshooting.md)
   * [本章小结](12_production/summary.md)
 
@@ -113,6 +121,7 @@
   * [14.4 对话历史管理](14_practice/14.4_conversation_history.md)
   * [14.5 性能优化与部署](14_practice/14.5_deployment_optimization.md)
   * [14.6 持续迭代与改进](14_practice/14.6_optimization.md)
+  * [14.7 可运行的代码示例与实现模式](14_practice/14.7_runnable_code_examples.md)
   * [本章小结](14_practice/summary.md)
 
 * [第十五章 未来展望与发展趋势](15_future/README.md)
