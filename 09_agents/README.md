@@ -10,4 +10,5 @@
 - [9.2 单智能体上下文管理](9.2_single_agent.md)
 - [9.3 多智能体上下文传递](9.3_multi_agent.md)
 - [9.4 智能体记忆与学习](9.4_agent_memory.md)
+- [9.5 智能体上下文管理的高级主题](9.5_advanced_agent_context.md)
 - [本章小结](summary.md)
