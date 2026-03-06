@@ -13,3 +13,14 @@
 ## 案例背景
 
 我们将构建一个名为 “EnterpriseKnow” 的系统，旨在帮助企业员工快速查询内部规章制度、技术文档和业务流程。该系统需要处理多格式文档（PDF, Markdown, Office），支持多轮对话，并能根据用户反馈不断自我优化。
+
+## 本章内容
+
+- [14.1 系统需求与架构设计](14.1_requirements.md)
+- [14.2 知识库向量化与索引](14.2_knowledge_base_vectorization.md)
+- [14.3 检索实现与查询处理](14.3_retrieval_implementation.md)
+- [14.4 对话历史管理](14.4_conversation_history.md)
+- [14.5 部署与优化](14.5_deployment_optimization.md)
+- [14.6 系统优化与迭代](14.6_optimization.md)
+- [14.7 完整可运行代码示例](14.7_runnable_code_examples.md)
+- [本章小结](summary.md)
