@@ -11,4 +11,6 @@
 - [10.3 自适应上下文管理](10.3_adaptive_context.md)
 - [10.4 长上下文模型应用](10.4_long_context.md)
 - [10.5 多模态上下文管理](10.5_multimodal_context.md)
+- [10.6 Graph RAG 失败案例分析](10.6_graph_rag_failures.md)
+- [10.7 多模态上下文安全策略](10.7_multimodal_context_security.md)
 - [本章小结](summary.md)
