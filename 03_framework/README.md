@@ -10,4 +10,5 @@
 - [3.2 四大核心策略概览](3.2_four_strategies.md)
 - [3.3 上下文质量评估](3.3_quality_metrics.md)
 - [3.4 上下文工程方法论](3.4_methodology.md)
+- [3.5 上下文管理的量化评估方法](3.5_quantitative_evaluation.md)
 - [本章小结](summary.md)
