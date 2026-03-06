@@ -8,7 +8,10 @@
 
 - [12.1 上下文工程工作流](12.1_workflow.md)
 - [12.2 性能优化与成本控制](12.2_optimization.md)
+  - [12.2.1 成本建模与ROI分析框架](12.2.1_cost_modeling_roi.md)
+  - [12.2.2 成本优化的具体行业数据](12.2.2_cost_optimization_industry.md)
 - [12.3 可观测性与调试](12.3_observability.md)
 - [12.4 安全性与治理](12.4_security.md)
+  - [12.4.1 上下文工程中的安全与合规](12.4.1_security_compliance.md)
 - [12.5 故障排查与问题诊断](12.5_troubleshooting.md)
 - [本章小结](summary.md)
