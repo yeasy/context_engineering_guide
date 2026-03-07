@@ -227,6 +227,7 @@ npx honkit serve   # 启动本地服务
 | [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 智能体的上下文管理是本书技术的核心应用场景 |
 | [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
 | [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
+| [《大模型原理与架构》](https://github.com/yeasy/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
 
 ---
 
