@@ -79,3 +79,6 @@
 ### 预告
 
 下一章将讨论压缩策略——如何在有限的上下文空间中容纳更多有效信息，包括摘要、信息提取和对话历史管理技术。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

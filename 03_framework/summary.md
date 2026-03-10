@@ -61,3 +61,6 @@
 - [第五章](../05_select/README.md)：选择策略——检索与 [RAG](../05_select/5.1_rag_principles.md)
 - [第六章](../06_compress/README.md)：压缩策略——信息密度优化
 - [第七章](../07_isolate/README.md)：隔离策略——结构化与组织
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

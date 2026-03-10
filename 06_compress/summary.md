@@ -62,3 +62,6 @@
 ### 预告
 
 下一章将讨论隔离策略——如何通过结构化组织提升上下文的清晰度和有效性，包括 XML 标签、指令分层和多任务隔离技术。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

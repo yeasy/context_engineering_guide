@@ -76,3 +76,6 @@
 ### 预告
 
 最后一章将展望上下文工程的未来发展趋势，包括技术演进、行业应用、挑战与机遇，并为读者提供成为上下文工程专家的路径建议。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

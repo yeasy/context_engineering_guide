@@ -60,3 +60,6 @@
 ### 预告
 
 至此，我们完成了四大核心策略（写入、选择、压缩、隔离）的讨论。下一章将进入第三部分“实践方法”，首先探讨工具调用与能力扩展。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

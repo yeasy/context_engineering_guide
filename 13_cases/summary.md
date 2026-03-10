@@ -39,3 +39,6 @@
 ### 预告
 
 下一章将进入综合实战，串联全书方法，构建企业级知识库问答系统。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

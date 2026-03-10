@@ -58,3 +58,6 @@
 ### 预告
 
 下一章将介绍上下文工程的理论框架，包括信息环境设计原则和四大核心策略（写入、选择、压缩、隔离）。这些策略将为后续的技术实践提供方法论指导。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

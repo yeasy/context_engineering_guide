@@ -66,3 +66,6 @@
 ### 预告
 
 下一章将讨论智能体上下文管理，探讨如何为 AI 智能体设计更复杂的上下文架构，包括多层次记忆、状态追踪和多智能体协作。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

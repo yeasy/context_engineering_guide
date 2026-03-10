@@ -59,3 +59,6 @@
 ### 预告
 
 下一章将讨论选择策略——如何从存储的大量信息中精准检索当前任务所需的内容。这是 [RAG](../05_select/5.1_rag_principles.md) 系统的核心技术。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

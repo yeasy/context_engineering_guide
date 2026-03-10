@@ -72,3 +72,6 @@
 ### 预告
 
 下一章将通过综合案例分析，展示如何将前述理论与技术应用于实际的复杂场景中。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

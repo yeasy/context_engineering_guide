@@ -42,3 +42,6 @@
 ### 预告
 
 下一章将展望上下文工程的未来趋势，并给出持续学习与成长路径。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

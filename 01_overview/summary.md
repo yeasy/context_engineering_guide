@@ -52,3 +52,6 @@
 ### 预告
 
 下一章将深入大语言模型的基础知识，理解上下文窗口的工作原理和限制。这是掌握上下文工程技术的必要基础。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

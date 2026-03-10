@@ -38,3 +38,6 @@
 ### 预告
 
 下一章将进入生产环境最佳实践，聚焦工作流、性能与成本、可观测性、安全治理与故障排查。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。
