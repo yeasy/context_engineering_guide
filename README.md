@@ -6,7 +6,7 @@
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.02-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.03-blue)
 [![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context-engineering-guide)
 
 [开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
@@ -94,7 +94,7 @@
 
 ## 五分钟快速上手
 
-"理解上下文窗口"——跟随以下步骤快速掌握核心能力：
+“理解上下文窗口”——跟随以下步骤快速掌握核心能力：
 
 1. **认识上下文**（第1-2章）：理解什么是上下文窗口、Token 概念，以及为什么上下文质量影响模型输出
 2. **窗口管理实战**（第3章）：学习如何高效利用有限的上下文窗口，掌握分块与优化策略
@@ -173,7 +173,7 @@ npx honkit serve   # 启动本地服务
 ```text
 📕 初学者：按顺序阅读全书
 📗 有经验者：重点阅读第二、三部分
-📘 快速参考：阅读每章末尾的"本章小结"
+📘 快速参考：阅读每章末尾的“本章小结”
 ```
 
 ---
