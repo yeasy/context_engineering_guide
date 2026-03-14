@@ -4,7 +4,7 @@
 
 ## 本章内容
 
-*   [11.1 过度压缩与信息丢失](11.1_over_compression.md)
-*   [11.2 上下文污染与隔离失效](11.2_context_pollution.md)
-*   [11.3 检索失败与相关性陷阱](11.3_retrieval_failures.md)
-*   [本章小结](summary.md)
+-   [11.1 过度压缩与信息丢失](11.1_over_compression.md)
+-   [11.2 上下文污染与隔离失效](11.2_context_pollution.md)
+-   [11.3 检索失败与相关性陷阱](11.3_retrieval_failures.md)
+-   [本章小结](summary.md)
