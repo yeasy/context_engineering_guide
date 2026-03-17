@@ -166,10 +166,13 @@ Reciprocal Rank Fusion，融合多个检索结果排序的算法。
 **Semantic Memory（语义记忆）**  
 存储抽象事实和概念的记忆类型。
 
-**Semantic Search（语义搜索）**  
+**Semantic Search（语义搜索）**
 基于语义相似度而非关键词匹配的信息检索方法。
 
-**System Prompt（系统提示词）**  
+**SSM（状态空间模型）**
+State Space Model，一类用递推状态方程处理序列数据的神经网络架构，通过固定维度的隐状态演化实现线性时间和空间复杂度。代表模型包括 Mamba、RWKV 等，在长序列建模中相比 Transformer 具有 O(n) 计算复杂度的优势，特别适合处理超长上下文任务。
+
+**System Prompt（系统提示词）**
 定义模型基本角色和行为的核心指令。
 
 **SLO（服务等级目标）**  
