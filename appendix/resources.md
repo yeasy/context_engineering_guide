@@ -32,7 +32,7 @@
 - **OpenAI Blog**：[官方博客](https://openai.com/blog)
 - **Anthropic Research**：[研究主页](https://www.anthropic.com/research)
 - **Anthropic Engineering Blog**：[工程博客](https://www.anthropic.com/engineering) ⭐ *上下文工程核心参考*
-- **Google AI Blog**：[Google AI Blog](https://blog.research.google)
+- **Google AI Blog**：[官方博客](https://blog.research.google)
 
 ### 上下文工程专题文章
 
