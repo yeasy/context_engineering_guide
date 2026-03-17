@@ -106,12 +106,12 @@
   * [12.5 故障排查与问题诊断](12_production/12.5_troubleshooting.md)
   * [本章小结](12_production/summary.md)
 
-* [第十三章 行业应用案例](13_cases/README.md)
+* [第十三章 行业应用与架构案例](13_cases/README.md)
   * [13.1 医疗：电子病历智能问答](13_cases/13.1_medical.md)
   * [13.2 金融：智能风控知识库](13_cases/13.2_financial.md)
   * [13.3 法律：合同审查助手](13_cases/13.3_legal.md)
   * [13.4 教育：个性化助教系统](13_cases/13.4_education.md)
-  * [13.5 案例分析：全自主智能体架构（示意）](13_cases/13.5_generalist_agent.md)
+  * [13.5 跨行业：全自主智能体架构（示意）](13_cases/13.5_generalist_agent.md)
   * [本章小结](13_cases/summary.md)
 
 * [第十四章 综合实战 - 构建企业知识库问答系统](14_practice/README.md)
