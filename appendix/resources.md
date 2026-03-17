@@ -8,20 +8,20 @@
 
 ### OpenAI
 
-- **文档首页**：https://platform.openai.com/docs
-- **提示词工程指南**：https://platform.openai.com/docs/guides/prompt-engineering
-- **函数调用**：https://platform.openai.com/docs/guides/function-calling
+- **文档首页**：[OpenAI Docs](https://platform.openai.com/docs)
+- **提示词工程指南**：[OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- **函数调用**：[OpenAI Function Calling Guide](https://platform.openai.com/docs/guides/function-calling)
 
 ### Anthropic
 
-- **Claude 文档**：https://docs.anthropic.com
-- **提示词库**：https://docs.anthropic.com/en/prompt-library
+- **Claude 文档**：[Anthropic Docs](https://docs.anthropic.com)
+- **提示词库**：[Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library)
 - **Claude 系统提示词指南**
 
 ### Google
 
-- **Gemini API 文档**：https://ai.google.dev/docs
-- **Vertex AI 文档**：https://cloud.google.com/vertex-ai/docs
+- **Gemini API 文档**：[Google AI Docs](https://ai.google.dev/docs)
+- **Vertex AI 文档**：[Vertex AI Docs](https://cloud.google.com/vertex-ai/docs)
 
 ---
 
@@ -29,10 +29,10 @@
 
 ### 公司博客
 
-- **OpenAI Blog**：https://openai.com/blog
-- **Anthropic Research**：https://www.anthropic.com/research
-- **Anthropic Engineering Blog**：https://www.anthropic.com/engineering ⭐ *上下文工程核心参考*
-- **Google AI Blog**：https://blog.research.google
+- **OpenAI Blog**：[官方博客](https://openai.com/blog)
+- **Anthropic Research**：[研究主页](https://www.anthropic.com/research)
+- **Anthropic Engineering Blog**：[工程博客](https://www.anthropic.com/engineering) ⭐ *上下文工程核心参考*
+- **Google AI Blog**：[Google AI Blog](https://blog.research.google)
 
 ### 上下文工程专题文章
 
@@ -48,7 +48,7 @@
 
 ### 技术社区
 
-- **Towards Data Science**：https://towardsdatascience.com
+- **Towards Data Science**：[主页](https://towardsdatascience.com)
 - **Medium AI 专栏**
 - **各框架官方博客**
 
@@ -65,9 +65,9 @@
 
 ### 推荐阅读平台
 
-- **arXiv**：https://arxiv.org
-- **Papers with Code**：https://paperswithcode.com
-- **Semantic Scholar**：https://semanticscholar.org
+- **arXiv**：[主页](https://arxiv.org)
+- **Papers with Code**：[主页](https://paperswithcode.com)
+- **Semantic Scholar**：[主页](https://semanticscholar.org)
 
 ---
 
@@ -91,9 +91,9 @@
 
 ### 学习参考
 
-- **LangChain 示例**：https://github.com/langchain-ai/langchain
-- **LlamaIndex 示例**：https://github.com/run-llama/llama_index
-- **Awesome LLM**：https://github.com/Hannibal046/Awesome-LLM
+- **LangChain 示例**：[仓库](https://github.com/langchain-ai/langchain)
+- **LlamaIndex 示例**：[仓库](https://github.com/run-llama/llama_index)
+- **Awesome LLM**：[仓库](https://github.com/Hannibal046/Awesome-LLM)
 
 ### RAG 实现
 

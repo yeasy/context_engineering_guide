@@ -17,7 +17,7 @@
 - 活跃的社区
 - 详细的文档
 
-**官网**：https://langchain.com
+**官网**：[LangChain](https://langchain.com)
 
 #### LlamaIndex
 
@@ -28,7 +28,7 @@
 - 灵活的检索策略
 - 支持 Graph RAG
 
-**官网**：https://llamaindex.ai
+**官网**：[LlamaIndex](https://llamaindex.ai)
 
 #### Haystack
 
@@ -39,7 +39,7 @@
 - 可视化管道编辑
 - 评估工具集成
 
-**官网**：https://haystack.deepset.ai
+**官网**：[Haystack](https://haystack.deepset.ai)
 
 ### 智能体框架
 
