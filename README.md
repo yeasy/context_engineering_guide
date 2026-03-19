@@ -211,7 +211,7 @@ npx honkit serve   # 启动本地服务
 └── 附录D：参考文献
 ```
 
-📖 完整目录请查看 [SUMMARY.md](SUMMARY.md)
+📖 完整目录请从 [第一章：认识上下文工程](01_overview/README.md) 开始。
 
 ---
 
