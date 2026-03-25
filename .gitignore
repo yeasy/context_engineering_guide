@@ -4,6 +4,7 @@ package-lock.json
 
 # Book build output
 _book/
+_site*
 
 # OS specific
 .DS_Store
