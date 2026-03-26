@@ -8,6 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.03-blue)
 [![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context-engineering-guide)
+[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest/download/context_engineering_guide.pdf)
 
 [开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
 
