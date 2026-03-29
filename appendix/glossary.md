@@ -14,7 +14,6 @@
 **ANN（近似最近邻）**
 Approximate Nearest Neighbor，向量搜索中用于快速查找相似向量的算法。
 
-
 ### C
 
 **Chain of Thought (CoT)**
