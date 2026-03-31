@@ -33,7 +33,7 @@
 
 这本书将带你系统掌握这门 AI 时代最核心的工程能力。
 
-> 💡 **本书与提示词工程的关系**：[《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) 聚焦于单次交互中的提示词设计技巧；而本书则关注更宏观的系统层面——如何通过 RAG、记忆架构、工具调用和上下文压缩等工程手段，在生产环境中持续为模型提供高质量的上下文。建议先阅读提示词工程作为基础，再深入本书的上下文工程体系。
+> 💡 **本书与提示词工程的关系**：[《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) 聚焦于单次交互中的提示词设计技巧；而本书则关注更宏观的系统层面——如何通过 RAG、记忆架构、工具调用和上下文压缩等工程手段，在生产环境中持续为模型提供高质量的上下文。建议先阅读提示词工程作为基础，再深入本书的上下文工程体系。
 
 ---
 
@@ -240,13 +240,13 @@ mdpress serve
 
 | 书名 | 与本书的关系 |
 |------|------------|
-| [《零基础学 AI》](https://github.com/yeasy/ai_beginner_guide) | AI 零基础入门，适合缺乏 AI 背景的读者 |
-| [《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) | 提示词设计基础，本书的前置读物 |
-| [《Claude 技术指南》](https://github.com/yeasy/claude_guide) | Claude 的 MCP 协议与工具使用实践 |
-| [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 智能体的上下文管理是本书技术的核心应用场景 |
-| [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
-| [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
-| [《大模型原理与架构》](https://github.com/yeasy/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
+| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合缺乏 AI 背景的读者 |
+| [《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) | 提示词设计基础，本书的前置读物 |
+| [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide) | Claude 的 MCP 协议与工具使用实践 |
+| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 智能体的上下文管理是本书技术的核心应用场景 |
+| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
+| [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
+| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
 
 ---
 
