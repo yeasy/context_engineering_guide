@@ -8,7 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
 [![Release](https://img.shields.io/github/release/yeasy/context_engineering_guide.svg)](https://github.com/yeasy/context_engineering_guide/releases)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.03-blue)
-[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context-engineering-guide)
+[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context_engineering_guide)
 [![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest)
 
 [开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
@@ -201,7 +201,7 @@ brew tap yeasy/tap && brew install mdpress
 mdpress serve
 ```
 
-启动后访问 [本地阅读地址](http://localhost:4000) 即可阅读。
+启动后访问 [本地阅读地址](http://localhost:9000) 即可阅读。
 
 ### 阅读建议
 
@@ -274,6 +274,7 @@ mdpress serve
 | [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
 | [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
 | [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
+| [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide) | Harness 记忆子系统与上下文组装引擎的工程实现 |
 
 ---
 
