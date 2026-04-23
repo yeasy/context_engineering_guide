@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">端到端安全数据流图</title>
+  <desc id="desc">从用户请求到检索、组装、模型生成、输出过滤和审计的全链路安全控制点。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbfcfe" />
+      <stop offset="100%" stop-color="#f3f6fb" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#16324f" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="600" rx="28" fill="url(#bg)" />
+  <text x="56" y="62" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="28" font-weight="700" fill="#16324f">端到端安全数据流图</text>
+  <text x="56" y="92" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">把安全控制点插在“写入、检索、组装、生成、输出、审计”每一跳，而不是只盯模型本身。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="150" width="120" height="70" rx="18" fill="#16324f" />
+    <text x="114" y="192" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">用户请求</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="206" y="150" width="144" height="70" rx="18" fill="#3e7cb1" />
+    <text x="278" y="183" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">输入校验</text>
+    <text x="278" y="205" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ebf4fa">注入检测 / 规范化</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="382" y="150" width="160" height="70" rx="18" fill="#2a9d8f" />
+    <text x="462" y="183" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">检索与授权代理</text>
+    <text x="462" y="205" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ebfffb">租户隔离 / 来源标记</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="574" y="150" width="154" height="70" rx="18" fill="#e9c46a" />
+    <text x="651" y="183" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#3b2f16">安全提示组装</text>
+    <text x="651" y="205" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#3b2f16">trust level / PII 过滤</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="760" y="150" width="146" height="70" rx="18" fill="#e76f51" />
+    <text x="833" y="183" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">LLM 生成</text>
+    <text x="833" y="205" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">最小必要上下文</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="638" y="298" width="156" height="72" rx="18" fill="#7c5cff" />
+    <text x="716" y="331" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">输出审查</text>
+    <text x="716" y="353" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">敏感度评分 / 脱敏 / 拦截</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="820" y="298" width="86" height="72" rx="18" fill="#264653" />
+    <text x="863" y="342" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">用户</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="206" y="298" width="160" height="72" rx="18" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="286" y="328" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#16324f">受控知识源</text>
+    <text x="286" y="352" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#486581">文档库 / DB / API / 缓存</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="54" y="430" width="852" height="92" rx="20" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="82" y="466" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="700" fill="#16324f">治理横切面</text>
+    <text x="82" y="494" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#486581">不可变审计日志 | 加密与密钥管理 | 最小权限 | 保留期策略 | 异常告警 | 合规报告</text>
+    <text x="82" y="516" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#627d98">这些控制并不属于单个节点，而是贯穿整条上下文数据链路。</text>
+  </g>
+
+  <line x1="174" y1="185" x2="206" y2="185" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="206,185 192,177 192,193" fill="#9fb3c8" />
+  <line x1="350" y1="185" x2="382" y2="185" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="382,185 368,177 368,193" fill="#9fb3c8" />
+  <line x1="542" y1="185" x2="574" y2="185" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="574,185 560,177 560,193" fill="#9fb3c8" />
+  <line x1="728" y1="185" x2="760" y2="185" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="760,185 746,177 746,193" fill="#9fb3c8" />
+  <line x1="833" y1="220" x2="833" y2="298" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="833,298 825,284 841,284" fill="#9fb3c8" />
+  <line x1="794" y1="334" x2="820" y2="334" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="820,334 806,326 806,342" fill="#9fb3c8" />
+  <line x1="366" y1="334" x2="462" y2="220" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="462,220 447,226 459,236" fill="#9fb3c8" />
+</svg>

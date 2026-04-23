@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code 上下文架构图</title>
+  <desc id="desc">展示可缓存系统前缀、会话装配器、项目记忆层级、按需工具加载与压缩回路的关系。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fbff" />
+      <stop offset="100%" stop-color="#eef3ff" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#16324f" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="620" rx="28" fill="url(#bg)" />
+  <text x="56" y="62" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="28" font-weight="700" fill="#16324f">Claude Code 上下文架构图</text>
+  <text x="56" y="92" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">把“可缓存前缀”“项目记忆”“运行时工具与压缩回路”拆开管理，才能稳定控制上下文成本。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="56" y="128" width="250" height="382" rx="22" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="84" y="166" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="700" fill="#16324f">可缓存系统前缀</text>
+    <rect x="84" y="188" width="194" height="66" rx="16" fill="#16324f" />
+    <text x="181" y="215" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">静态系统提示词</text>
+    <text x="181" y="237" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#d9e2ec">行为准则 / 安全边界 / 工具规则</text>
+    <rect x="84" y="270" width="194" height="66" rx="16" fill="#3e7cb1" />
+    <text x="181" y="297" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">轻量工具存根</text>
+    <text x="181" y="319" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ebf4fa">名称 + 简介，避免完整 schema 常驻</text>
+    <rect x="84" y="352" width="194" height="66" rx="16" fill="#2a9d8f" />
+    <text x="181" y="379" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">动态边界标记</text>
+    <text x="181" y="401" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ebfffb">在固定前缀后切入会话差异化内容</text>
+    <text x="84" y="456" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#486581">目标：最大化 prompt caching 命中，减少每轮重复 prefill。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="354" y="128" width="252" height="382" rx="22" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="382" y="166" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="700" fill="#16324f">会话上下文装配器</text>
+    <rect x="382" y="188" width="196" height="56" rx="16" fill="#4f7cff" />
+    <text x="480" y="222" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">getSystemContext</text>
+    <rect x="382" y="258" width="196" height="56" rx="16" fill="#5b8def" />
+    <text x="480" y="292" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">getUserContext</text>
+    <rect x="382" y="328" width="196" height="56" rx="16" fill="#e9c46a" />
+    <text x="480" y="362" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#3b2f16">Token 预算器</text>
+    <rect x="382" y="398" width="196" height="56" rx="16" fill="#e76f51" />
+    <text x="480" y="432" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">压缩断路器</text>
+    <text x="382" y="476" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#486581">职责：合并仓库状态、记忆层级、工具定义与当前用户任务；接近窗口上限时触发 compact。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="654" y="128" width="250" height="382" rx="22" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="682" y="166" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="700" fill="#16324f">项目与运行时来源</text>
+    <rect x="682" y="188" width="194" height="56" rx="16" fill="#264653" />
+    <text x="779" y="222" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">仓库扫描 / Git 状态</text>
+    <rect x="682" y="258" width="194" height="66" rx="16" fill="#2a9d8f" />
+    <text x="779" y="285" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">CLAUDE.md 层级链</text>
+    <text x="779" y="307" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ebfffb">企业 / 用户 / 项目 / 按需导入</text>
+    <rect x="682" y="340" width="194" height="56" rx="16" fill="#f4a261" />
+    <text x="779" y="374" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">MEMORY.md / topic files</text>
+    <rect x="682" y="410" width="194" height="56" rx="16" fill="#7c5cff" />
+    <text x="779" y="444" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">按需加载完整工具 schema</text>
+    <text x="682" y="488" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#486581">只把当前轮真正需要的细节拉进窗口，避免把所有外部状态一次性塞满。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="542" width="720" height="42" rx="16" fill="#16324f" />
+    <text x="480" y="568" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">运行时回路：正常执行 → 接近阈值 → PreCompact / compact → 检查点摘要 → 恢复继续</text>
+  </g>
+
+  <line x1="306" y1="320" x2="354" y2="320" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="354,320 340,312 340,328" fill="#9fb3c8" />
+  <line x1="606" y1="320" x2="654" y2="320" stroke="#9fb3c8" stroke-width="4" />
+  <polygon points="654,320 640,312 640,328" fill="#9fb3c8" />
+</svg>

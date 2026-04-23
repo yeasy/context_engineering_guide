@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">模型选型象限图</title>
+  <desc id="desc">以任务复杂度和成本延迟约束为坐标，气泡大小表示常见上下文量级。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7fafc" />
+      <stop offset="100%" stop-color="#eef4ff" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1f3b5b" flood-opacity="0.10" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="620" rx="28" fill="url(#bg)" />
+  <text x="56" y="64" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="28" font-weight="700" fill="#16324f">模型选型象限图</text>
+  <text x="56" y="94" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">纵轴看任务复杂度，横轴看成本/延迟约束；气泡越大，常见上下文窗口越大。</text>
+
+  <rect x="80" y="124" width="760" height="380" rx="24" fill="#ffffff" stroke="#d6e2ee" />
+  <line x1="180" y1="464" x2="780" y2="464" stroke="#365c7c" stroke-width="3" />
+  <line x1="180" y1="464" x2="180" y2="164" stroke="#365c7c" stroke-width="3" />
+  <polygon points="780,464 764,456 764,472" fill="#365c7c" />
+  <polygon points="180,164 172,180 188,180" fill="#365c7c" />
+
+  <line x1="480" y1="164" x2="480" y2="464" stroke="#d6e2ee" stroke-dasharray="8 8" />
+  <line x1="180" y1="314" x2="780" y2="314" stroke="#d6e2ee" stroke-dasharray="8 8" />
+
+  <text x="810" y="470" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#365c7c">成本/延迟约束更宽松</text>
+  <text x="94" y="470" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#365c7c">更严格</text>
+  <text x="122" y="184" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#365c7c" transform="rotate(-90 122 184)">任务复杂度 / 质量要求更高</text>
+  <text x="90" y="457" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#365c7c" transform="rotate(-90 90 457)">更低</text>
+
+  <text x="230" y="196" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">高复杂度 + 强约束</text>
+  <text x="530" y="196" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">高复杂度 + 可投入更多预算</text>
+  <text x="230" y="344" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">中低复杂度 + 高性价比</text>
+  <text x="530" y="344" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">长上下文 / 多模态探索</text>
+
+  <g filter="url(#shadow)">
+    <circle cx="332" cy="252" r="42" fill="#f4a261" fill-opacity="0.88" stroke="#b15a20" stroke-width="2" />
+    <text x="332" y="247" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">GPT-5.x</text>
+    <text x="332" y="268" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">高质量推理 / 约 400K 级</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="602" cy="242" r="54" fill="#2a9d8f" fill-opacity="0.90" stroke="#1c6e63" stroke-width="2" />
+    <text x="602" y="237" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Claude Opus 4.7</text>
+    <text x="602" y="260" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">复杂任务 / 1M 上下文</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="694" cy="292" r="60" fill="#4f7cff" fill-opacity="0.88" stroke="#244ec8" stroke-width="2" />
+    <text x="694" y="286" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Gemini 2.5 Pro</text>
+    <text x="694" y="309" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">多模态 / 1,048,576 输入</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="548" cy="286" r="48" fill="#5b8def" fill-opacity="0.88" stroke="#2a5bb2" stroke-width="2" />
+    <text x="548" y="281" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">Claude Sonnet 4.6</text>
+    <text x="548" y="303" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">速度/质量均衡 / 1M</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="330" cy="388" r="38" fill="#e9c46a" fill-opacity="0.92" stroke="#a97d12" stroke-width="2" />
+    <text x="330" y="383" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#3b2f16">轻量快速模型</text>
+    <text x="330" y="404" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#3b2f16">路由 / 分类 / 初筛</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="580" cy="398" r="46" fill="#e76f51" fill-opacity="0.88" stroke="#a63f28" stroke-width="2" />
+    <text x="580" y="392" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">开源自部署模型</text>
+    <text x="580" y="414" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">私有化 / 定制 / 压测先行</text>
+  </g>
+
+  <rect x="96" y="532" width="768" height="56" rx="18" fill="#ffffff" stroke="#d6e2ee" />
+  <circle cx="136" cy="560" r="10" fill="#2a9d8f" />
+  <text x="154" y="565" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">旗舰高能力模型：适合复杂推理、长流程执行。</text>
+  <circle cx="430" cy="560" r="10" fill="#e9c46a" />
+  <text x="448" y="565" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">轻量模型：适合作为分层路由或预处理入口。</text>
+  <circle cx="690" cy="560" r="10" fill="#4f7cff" />
+  <text x="708" y="565" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">大气泡：更适合超长文档和大代码库场景。</text>
+</svg>

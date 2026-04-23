@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Token 预算堆叠图</title>
+  <desc id="desc">展示系统提示词、知识检索、对话历史和输出预留在上下文预算中的典型占比与动态调整方向。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9fbfd" />
+      <stop offset="100%" stop-color="#eef6f7" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#16324f" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="520" rx="28" fill="url(#bg)" />
+  <text x="56" y="62" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="28" font-weight="700" fill="#16324f">Token 预算堆叠图</text>
+  <text x="56" y="92" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">先给稳定部分预留固定预算，再把动态空间留给检索、历史和输出。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="132" width="808" height="124" rx="22" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="104" y="170" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">典型起始分配（100% 上下文预算）</text>
+
+    <rect x="104" y="194" width="81" height="34" rx="10" fill="#264653" />
+    <rect x="185" y="194" width="323" height="34" rx="10" fill="#2a9d8f" />
+    <rect x="508" y="194" width="202" height="34" rx="10" fill="#e9c46a" />
+    <rect x="710" y="194" width="146" height="34" rx="10" fill="#e76f51" />
+
+    <text x="145" y="217" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#ffffff">系统提示词 10%</text>
+    <text x="347" y="217" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#ffffff">知识/检索内容 40%</text>
+    <text x="609" y="217" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#3b2f16">对话历史 25%</text>
+    <text x="783" y="217" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#ffffff">输出预留 25%</text>
+
+    <text x="104" y="244" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#627d98">原则：稳定前缀尽量短且固定，波动预算优先给最影响结果质量的部分。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="286" width="248" height="160" rx="20" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="100" y="324" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">知识密集任务</text>
+    <text x="100" y="352" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#486581">把预算更多分给检索与证据。</text>
+    <rect x="100" y="378" width="36" height="12" rx="6" fill="#2a9d8f" />
+    <text x="148" y="389" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">检索预算上调</text>
+    <rect x="100" y="408" width="36" height="12" rx="6" fill="#e9c46a" />
+    <text x="148" y="419" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">历史摘要化</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="356" y="286" width="248" height="160" rx="20" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="380" y="324" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">多轮协作任务</text>
+    <text x="380" y="352" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#486581">增加历史与检查点空间。</text>
+    <rect x="380" y="378" width="36" height="12" rx="6" fill="#e9c46a" />
+    <text x="428" y="389" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">历史预算上调</text>
+    <rect x="380" y="408" width="36" height="12" rx="6" fill="#264653" />
+    <text x="428" y="419" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">系统前缀保持冻结</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="636" y="286" width="248" height="160" rx="20" fill="#ffffff" stroke="#d6e2ee" />
+    <text x="660" y="324" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#16324f">长文生成任务</text>
+    <text x="660" y="352" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#486581">宁可少放背景，也要留足输出空间。</text>
+    <rect x="660" y="378" width="36" height="12" rx="6" fill="#e76f51" />
+    <text x="708" y="389" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">输出预留上调</text>
+    <rect x="660" y="408" width="36" height="12" rx="6" fill="#2a9d8f" />
+    <text x="708" y="419" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#334e68">检索内容二次压缩</text>
+  </g>
+</svg>
