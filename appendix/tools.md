@@ -99,17 +99,17 @@
 
 **特点**：与现有 PG 基础设施集成、生态成熟
 
-### Oracle 数据库 23ai
+### Oracle AI Database 26ai
 
 **类型**：商业/云服务
 
-**特点**：原生 AI 向量搜索、企业级安全与高可用
+**特点**：原生 AI Vector Search，可在 Oracle 融合数据库能力中结合关系、JSON、图、文本、空间与向量查询；23ai/26ai 命名和云服务显示存在版本边界，生产选型应以当前 Oracle 文档和所在云服务控制台为准。
 
-### MySQL：8.0+ / HeatWave
+### MySQL：9.x VECTOR / MySQL AI / HeatWave
 
-**类型**：开源/云服务
+**类型**：开源/商业/云服务
 
-**特点**：全球最流行的开源数据库原生支持向量
+**特点**：MySQL 9.x 提供 `VECTOR` 类型和向量函数，但 `VECTOR` 列不能作为主键、外键、唯一键或分区键；MySQL AI/HeatWave 提供面向 GenAI 的 Vector Store、向量嵌入和加速查询能力。不要把“MySQL 8.0+”泛化为原生向量数据库能力。
 
 ---
 

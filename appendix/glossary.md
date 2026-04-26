@@ -119,7 +119,7 @@ Massive Text Embedding Benchmark，用于评测与对比嵌入模型能力的公
 组织和管理 AI 系统记忆的多层次结构设计。
 
 **MemOS（记忆操作系统）**
-一种五层记忆工程架构（存储层、治理层、调度层、应用层、解码层），将复杂的记忆管理操作封装为标准化服务，对应用开发者透明。
+一种面向 AI 系统的记忆操作系统研究框架，将明文记忆、激活记忆和参数记忆作为可管理资源。论文中的系统架构是三层：Interface Layer、Operation Layer、Infrastructure Layer，并通过 MemCube、MemReader、MemScheduler、MemGovernance、MemStore 等模块管理记忆表示、调度、治理和迁移。
 
 **MMR（最大边际相关性）**
 Maximal Marginal Relevance，一种在“相关性”和“多样性”之间权衡的结果选择策略，常用于检索结果去重与多样化。
