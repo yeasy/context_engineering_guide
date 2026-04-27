@@ -37,25 +37,25 @@
   <g filter="url(#shadow)">
     <circle cx="332" cy="252" r="42" fill="#f4a261" fill-opacity="0.88" stroke="#b15a20" stroke-width="2" />
     <text x="332" y="247" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">GPT-5.x</text>
-    <text x="332" y="268" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">高质量推理 / 1M 级</text>
+    <text x="332" y="268" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">高质量推理 / 约 400K 级</text>
   </g>
 
   <g filter="url(#shadow)">
     <circle cx="602" cy="242" r="54" fill="#2a9d8f" fill-opacity="0.90" stroke="#1c6e63" stroke-width="2" />
-    <text x="602" y="237" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Claude Opus 4.x</text>
-    <text x="602" y="260" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">复杂任务 / 200K 级</text>
+    <text x="602" y="237" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Claude Opus 4.7</text>
+    <text x="602" y="260" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">复杂任务 / 1M 上下文</text>
   </g>
 
   <g filter="url(#shadow)">
     <circle cx="694" cy="292" r="60" fill="#4f7cff" fill-opacity="0.88" stroke="#244ec8" stroke-width="2" />
-    <text x="694" y="286" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Gemini 3.1 Pro</text>
+    <text x="694" y="286" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Gemini 2.5 Pro</text>
     <text x="694" y="309" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">多模态 / 1,048,576 输入</text>
   </g>
 
   <g filter="url(#shadow)">
     <circle cx="548" cy="286" r="48" fill="#5b8def" fill-opacity="0.88" stroke="#2a5bb2" stroke-width="2" />
-    <text x="548" y="281" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">Claude Sonnet 4</text>
-    <text x="548" y="303" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">1M beta / 条件访问</text>
+    <text x="548" y="281" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">Claude Sonnet 4.6</text>
+    <text x="548" y="303" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">速度/质量均衡 / 1M</text>
   </g>
 
   <g filter="url(#shadow)">
