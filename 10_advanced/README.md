@@ -13,4 +13,5 @@
 - [10.5 多模态上下文管理](10.5_multimodal_context.md)
 - [10.6 Graph RAG 失败案例分析](10.6_graph_rag_failures.md)
 - [10.7 多模态上下文安全策略](10.7_multimodal_context_security.md)
+- [10.8 长时间任务的上下文策略](10.8_long_horizon_tasks.md)
 - [本章小结](summary.md)
