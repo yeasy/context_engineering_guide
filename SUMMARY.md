@@ -138,3 +138,4 @@
 * [附录 B：工具与技术生态](appendix/tools.md)
 * [附录 C：参考资源](appendix/resources.md)
 * [附录 D：参考文献](appendix/references.md)
+* [附录 E：快变事实核验表](appendix/volatile_facts.md)
