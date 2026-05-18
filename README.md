@@ -7,7 +7,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
 [![Release](https://img.shields.io/github/release/yeasy/context_engineering_guide.svg)](https://github.com/yeasy/context_engineering_guide/releases)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.03-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.05-blue)
 [![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context_engineering_guide)
 [![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest)
 
@@ -16,12 +16,13 @@
 <img src="cover.jpg" width="300" alt="Context Engineering Guide Cover">
 
 </div>
+
 ---
 
 ## 为什么需要这本书？
 
 > “提示词工程已死，上下文工程永生。”
-> — 2026
+> — 2026-05
 
 当 LLM 应用从实验走向生产，**单纯的提示词设计已不足以构建可靠的 AI 系统**。
 
@@ -256,7 +257,7 @@ mdpress serve
 |------|------|
 | 📐 **体系完整** | 15 章内容，从入门到精通的完整学习路径 |
 | 🔬 **理论与实践并重** | 原理剖析 + 代码示例 + 最佳实践 |
-| 🆕 **紧跟前沿** | 涵盖 2026 年最新技术进展（Agentic RAG、Graph RAG、MCP 等） |
+| 🆕 **紧跟前沿** | 覆盖截至 2026-05 的关键技术进展（Agentic RAG、Graph RAG、MCP 等） |
 | 📊 **图文并茂** | Mermaid 流程图 + 表格对比 + 结构化示例 |
 
 ---
