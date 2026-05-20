@@ -26,7 +26,13 @@
 ### 长上下文与注意力
 
 - **Lost in the Middle**: Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2023). [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172). arXiv preprint arXiv:2307.03172.
-  - *解读：揭示了模型在处理长上下文时，倾向于关注开头和结尾的信息，而忽略中间部分。*
+  - *解读：揭示了部分模型在处理长上下文时存在位置偏置；现代系统仍需用任务级评测验证，而不能把该结论机械套用到所有模型。*
+
+- **RULER**: Hsieh, C. P., et al. (2024). [RULER: What's the Real Context Size of Your Long-Context Language Models?](https://arxiv.org/abs/2404.06654).
+  - *解读：指出单针 NIAH 只能覆盖较浅层的长上下文检索，扩展到多针、聚合和追踪等更难任务。*
+
+- **Found in the Middle**: Liu, H., et al. (2024). [Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization](https://research.google/pubs/found-in-the-middle-calibrating-positional-attention-bias-improves-long-context-utilization/).
+  - *解读：从位置注意力偏置角度分析并缓解长上下文中间位置利用不稳定的问题。*
 
 ### 知识图谱与 Graph RAG
 
@@ -62,3 +68,9 @@
 
 - **MTEB**: Muennighoff, N., et al. (2023). [MTEB: Massive Text Embedding Benchmark](https://arxiv.org/abs/2210.07316). EACL 2023.
   - *解读：大规模文本嵌入基准，覆盖 8 类任务、58 个数据集，是嵌入模型选型的权威排行榜。*
+
+- **ColBERT**: Khattab, O., & Zaharia, M. (2020). [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/abs/2004.12832).
+  - *解读：late interaction 检索的代表工作，通过查询和文档的细粒度交互提升检索质量。*
+
+- **Late Chunking**: Günther, M., Mohr, I., Williams, D. J., Wang, B., & Xiao, H. (2024). [Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models](https://arxiv.org/abs/2409.04701).
+  - *解读：先用长上下文嵌入模型编码文档，再对片段池化，缓解先切块带来的上下文丢失。*
