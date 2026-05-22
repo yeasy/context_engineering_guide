@@ -59,7 +59,8 @@
 
 ### 预告
 
-下一章将讨论生产环境的最佳实践，包括工作流设计、性能优化、可观测性和安全治理。
+下一章将进入进阶架构：自主 RAG、Graph RAG、长上下文、多模态和长时间任务等主题。它们会把本章的智能体上下文管理进一步扩展到更复杂的系统形态。
+
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

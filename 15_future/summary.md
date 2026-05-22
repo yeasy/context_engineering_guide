@@ -36,9 +36,10 @@
 3. **总结输出**：沉淀模板、Checklist 与失败案例库，形成团队共识。
 4. **建立网络**：与同行交流，吸收跨行业的工程经验与治理方法。
 
-### 预告
+### 后续实践
 
 全书到此结束。建议你回到第 14 章的综合实战，将本书方法落实到一个可运行、可观测、可迭代的系统中。
+
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。

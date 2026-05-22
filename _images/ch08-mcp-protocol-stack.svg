@@ -13,7 +13,7 @@
 
   <rect width="960" height="560" rx="28" fill="url(#bg)" />
   <text x="56" y="62" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="28" font-weight="700" fill="#16324f">MCP 协议栈分层图</text>
-  <text x="56" y="92" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">对应 MCP 2025-06-18 规范中的 host-client-server 架构与 capability negotiation。</text>
+  <text x="56" y="92" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="15" fill="#486581">对应 MCP 2025-11-25 规范中的 host-client-server 架构与 capability negotiation。</text>
 
   <g filter="url(#shadow)">
     <rect x="120" y="128" width="720" height="74" rx="22" fill="#16324f" />

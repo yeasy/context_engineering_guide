@@ -53,6 +53,9 @@
 - **ReAct**: Yao, S., et al. (2023). [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629). ICLR 2023.
   - *解读：提出“思考-行动-观察”的交替循环模式，是现代智能体架构的核心范式。*
 
+- **Agentic Reasoning**: Wei, T., et al. (2026). [Agentic Reasoning for Large Language Models](https://arxiv.org/abs/2601.12538). arXiv preprint arXiv:2601.12538. DOI: 10.48550/arXiv.2601.12538.
+  - *解读：系统梳理基础智能体推理、自我进化推理和集体多智能体推理三层框架，适合作为第九章高级智能体上下文管理的理论背景。*
+
 ### 工具使用
 
 - **Toolformer**: Schick, T., et al. (2023). [Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761).

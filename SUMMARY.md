@@ -123,6 +123,7 @@
   * [14.5 性能优化与部署](14_practice/14.5_deployment_optimization.md)
   * [14.6 持续迭代与改进](14_practice/14.6_optimization.md)
   * [14.7 可运行的代码示例与实现模式](14_practice/14.7_runnable_code_examples.md)
+  * [EnterpriseKnow 可运行最小实验](examples/enterprise_know/README.md)
   * [本章小结](14_practice/summary.md)
 
 * [第十五章 未来展望与发展趋势](15_future/README.md)

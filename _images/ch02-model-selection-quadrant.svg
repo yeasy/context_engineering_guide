@@ -37,7 +37,7 @@
   <g filter="url(#shadow)">
     <circle cx="332" cy="252" r="42" fill="#f4a261" fill-opacity="0.88" stroke="#b15a20" stroke-width="2" />
     <text x="332" y="247" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">GPT-5.x</text>
-    <text x="332" y="268" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">高质量推理 / 约 400K 级</text>
+    <text x="332" y="268" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#ffffff">高质量推理 / 最高 1M 级</text>
   </g>
 
   <g filter="url(#shadow)">
