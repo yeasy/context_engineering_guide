@@ -17,12 +17,25 @@
 python3 examples/enterprise_know/enterprise_know.py --query "差旅报销需要在多久内提交？"
 ```
 
+输出应包含 `answer`、`context` 和 `results` 字段。`answer` 应说明差旅报销需要在完成后 30 天内提交，`results[0].source` 应指向命中的制度文档。
+
+权限过滤可以用同一问题做对照：
+
+```bash
+python3 examples/enterprise_know/enterprise_know.py --query "生产数据库访问需要什么审批？" --department hr
+python3 examples/enterprise_know/enterprise_know.py --query "生产数据库访问需要什么审批？" --department engineering
+```
+
+第一条命令应拒绝回答并返回空 `results`；第二条命令应命中 `security_access.md`，并说明生产数据库访问需要堡垒机、MFA 和已批准工单。这组对照用于确认检索阶段和回答阶段都没有绕过部门权限。
+
 运行评估集：
 
 ```bash
 python3 examples/enterprise_know/enterprise_know.py --eval
 python3 -m unittest examples/enterprise_know/test_enterprise_know.py
 ```
+
+评估通过时，`--eval` 输出应包含 `passed: true`，并且 `source_hit_rate` 与 `answer_term_hit_rate` 都为 `1.0`。单元测试应以 `OK` 结束；如果任一项失败，先查看逐条 case 的 `missing_terms`、`expected_source` 和实际命中来源。
 
 ## 文件说明
 
