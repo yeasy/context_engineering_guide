@@ -13,6 +13,7 @@ from typing import Dict, Iterable, List, Sequence
 ROOT = Path(__file__).resolve().parent
 DEFAULT_DOC_DIR = ROOT / "sample_docs"
 DEFAULT_EVAL_SET = ROOT / "eval_set.jsonl"
+MIN_QUERY_TERM_COVERAGE = 0.2
 
 
 @dataclass(frozen=True)
@@ -183,10 +184,17 @@ class HybridRetriever:
 
     def search(self, query: str, department: str = "all", top_k: int = 4) -> List[RetrievalResult]:
         query_tokens = tokenize(query)
+        query_term_set = set(query_tokens)
         scored: List[RetrievalResult] = []
 
         for index, chunk in enumerate(self.chunks):
             if not self._can_read(chunk, department):
+                continue
+            query_coverage = (
+                len(query_term_set & set(self.chunk_tokens[index])) / len(query_term_set)
+                if query_term_set else 0
+            )
+            if query_coverage < MIN_QUERY_TERM_COVERAGE:
                 continue
             result = RetrievalResult(
                 chunk=chunk,

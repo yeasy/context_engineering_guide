@@ -24,6 +24,12 @@ class EnterpriseKnowTest(unittest.TestCase):
         self.assertFalse(any(result.chunk.id.startswith("security_access") for result in blocked))
         self.assertTrue(any(result.chunk.id.startswith("security_access") for result in allowed))
 
+    def test_acl_query_does_not_fall_back_to_unrelated_accessible_docs(self):
+        result = run_query("生产数据库访问需要什么审批？", department="hr")
+
+        self.assertIn("未找到有权限访问且与问题相关的资料", result["answer"])
+        self.assertEqual([], result["results"])
+
     def test_query_returns_cited_answer(self):
         result = run_query("VPN 登录失败怎么办？")
         self.assertIn("来源", result["answer"])
