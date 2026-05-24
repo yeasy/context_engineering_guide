@@ -23,6 +23,8 @@ yarn-error.log*
 
 # Python scripts
 /*.py
+__pycache__/
+*.pyc
 
 # Agent
 .agent/
