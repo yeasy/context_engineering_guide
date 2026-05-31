@@ -31,7 +31,7 @@
 - **RULER**: Hsieh, C. P., et al. (2024). [RULER: What's the Real Context Size of Your Long-Context Language Models?](https://arxiv.org/abs/2404.06654).
   - *解读：指出单针 NIAH 只能覆盖较浅层的长上下文检索，扩展到多针、聚合和追踪等更难任务。*
 
-- **Found in the Middle**: Liu, H., et al. (2024). [Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization](https://research.google/pubs/found-in-the-middle-calibrating-positional-attention-bias-improves-long-context-utilization/).
+- **Found in the Middle**: Hsieh, C.-Y., et al. (2024). [Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization](https://research.google/pubs/found-in-the-middle-calibrating-positional-attention-bias-improves-long-context-utilization/).
   - *解读：从位置注意力偏置角度分析并缓解长上下文中间位置利用不稳定的问题。*
 
 ### 知识图谱与 Graph RAG
