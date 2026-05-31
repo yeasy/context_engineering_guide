@@ -8,7 +8,7 @@
 
 - [10.1 自主检索增强生成与自主检索](10.1_agentic_rag.md)
 - [10.2 Graph RAG 与知识图谱](10.2_graph_rag.md)
-- [10.3 自适应上下文管理](10.3_adaptive_context.md)
+- [10.3 自适应与智能上下文管理](10.3_adaptive_context.md)
 - [10.4 长上下文模型应用](10.4_long_context.md)
 - [10.5 多模态上下文管理](10.5_multimodal_context.md)
 - [10.6 Graph RAG 失败案例分析](10.6_graph_rag_failures.md)
