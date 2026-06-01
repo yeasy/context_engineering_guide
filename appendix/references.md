@@ -44,6 +44,9 @@
 - **MemGPT**: Packer, C., et al. (2023). [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560).
   - *解读：提出将上下文窗口视为“主内存”、外部存储视为“磁盘”的操作系统隐喻，通过虚拟上下文管理实现无限对话记忆。*
 
+- **MemOS**: Li, Z., et al. (2025). [MemOS: A Memory OS for AI System](https://arxiv.org/abs/2507.03724).
+  - *解读：以 MemCube（记忆立方体）为基本单元封装记忆内容与元数据，统一管理明文、激活、参数三类记忆的表示、调度与演化，并采用接口层、操作层、基础设施层的三层架构。*
+
 - **Generative Agents**: Park, J. S., et al. (2023). [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442). UIST 2023.
   - *解读：斯坦福的生成式智能体研究，展示了如何通过反思（Reflection）和记忆检索构建具有可信行为的智能体。*
 
