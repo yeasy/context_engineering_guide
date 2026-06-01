@@ -23,6 +23,7 @@ yarn-error.log*
 
 # Python scripts
 /*.py
+!/check_project_rules.py
 __pycache__/
 *.pyc
 
