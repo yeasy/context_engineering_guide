@@ -59,6 +59,9 @@
 - **Agentic Reasoning**: Wei, T., et al. (2026). [Agentic Reasoning for Large Language Models](https://arxiv.org/abs/2601.12538). arXiv preprint arXiv:2601.12538. DOI: 10.48550/arXiv.2601.12538.
   - *解读：系统梳理基础智能体推理、自我进化推理和集体多智能体推理三层框架，适合作为第九章高级智能体上下文管理的理论背景。*
 
+- **OpenAI Dreaming**: OpenAI. (2026). [Dreaming: Better memory for a more helpful ChatGPT](https://openai.com/index/chatgpt-memory-dreaming/).
+  - *解读：ChatGPT 记忆从“保存的记忆”（显式写入）演进到后台自动综合的工程实践；提出“带上下文前进 / 遵循偏好 / 随时间保持时效”三条记忆评测目标，是第九章“做梦”机制的真实产品对照。*
+
 ### 工具使用
 
 - **Toolformer**: Schick, T., et al. (2023). [Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761).
