@@ -55,22 +55,22 @@ Data Loss Prevention，一类用于识别、拦截或审计敏感数据外泄的
 
 ### F
 
-**Fine-tuning（微调）**
-在预训练模型基础上，使用特定领域数据进行进一步训练及优化。
-
 **Few-shot Learning（少样本学习）**
 通过在提示词中提供少量示例，让模型学习并执行特定任务。
+
+**Fine-tuning（微调）**
+在预训练模型基础上，使用特定领域数据进行进一步训练及优化。
 
 **Function Calling（函数调用）**
 模型生成结构化函数调用请求的能力，用于与外部工具交互。
 
 ### G
 
-**Grounding（基座/接地）**
-将模型的生成内容限制在特定事实源或知识库范围内，以减少幻觉。
-
 **Graph RAG（图检索增强生成）**
 结合知识图谱进行检索和推理的 RAG 变体。
+
+**Grounding（基座/接地）**
+将模型的生成内容限制在特定事实源或知识库范围内，以减少幻觉。
 
 ### H
 
@@ -80,11 +80,11 @@ Data Loss Prevention，一类用于识别、拦截或审计敏感数据外泄的
 **HNSW**
 Hierarchical Navigable Small World，分层可导航小世界图，一种高效的近似最近邻（ANN）向量索引算法。
 
-**HyDE（假设文档嵌入）**
-Hypothetical Document Embedding，一种先用 LLM 生成假设答案再用其嵌入向量检索的技术。
-
 **Hybrid Search（混合检索）**
 结合语义检索和关键词检索的混合方法。
+
+**HyDE（假设文档嵌入）**
+Hypothetical Document Embedding，一种先用 LLM 生成假设答案再用其嵌入向量检索的技术。
 
 ### I
 
@@ -134,11 +134,11 @@ Massive Text Embedding Benchmark，用于评测与对比嵌入模型能力的公
 **PQ（乘积量化）**
 Product Quantization，一种向量有损压缩与近似距离计算方法，常用于降低内存占用并加速相似度搜索。
 
-**Prompt Chaining（提示链）**
-将复杂的任务分解为多个步骤，通过一系列关联的提示词依次引导模型完成。
-
 **Prompt Caching（提示缓存）**
 将系统提示词、知识库等固定内容的 KV 计算结果预先缓存，多次请求间复用以降低延迟和成本的技术。实际节省比例取决于平台价格、缓存生命周期、命中率和请求结构。
+
+**Prompt Chaining（提示链）**
+将复杂的任务分解为多个步骤，通过一系列关联的提示词依次引导模型完成。
 
 **Prompt Engineering（提示词工程）**
 设计和优化输入给模型的文本指令的技术，是上下文工程的子集。
@@ -179,9 +179,6 @@ State Space Model，一类用递推状态方程处理序列数据的神经网络
 
 ### T
 
-**TTFT（首字延迟）**
-Time To First Token，从请求发出到生成首个 Token 的时间，用于衡量端到端“体感延迟”与流式输出体验。
-
 **Token**
 大语言模型处理文本的基本单位。
 
@@ -190,6 +187,9 @@ Time To First Token，从请求发出到生成首个 Token 的时间，用于衡
 
 **Transformer**
 现代大语言模型的基础架构，基于自注意力机制。
+
+**TTFT（首字延迟）**
+Time To First Token，从请求发出到生成首个 Token 的时间，用于衡量端到端“体感延迟”与流式输出体验。
 
 ### V
 

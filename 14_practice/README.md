@@ -18,12 +18,12 @@
 
 ## 本章内容
 
-- [14.1 系统需求与架构设计](14.1_requirements.md)
-- [14.2 知识库向量化与索引](14.2_knowledge_base_vectorization.md)
-- [14.3 检索实现与查询处理](14.3_retrieval_implementation.md)
+- [14.1 项目需求与架构设计](14.1_requirements.md)
+- [14.2 知识库构建与向量化](14.2_knowledge_base_vectorization.md)
+- [14.3 检索系统实现](14.3_retrieval_implementation.md)
 - [14.4 对话历史管理](14.4_conversation_history.md)
-- [14.5 部署与优化](14.5_deployment_optimization.md)
-- [14.6 系统优化与迭代](14.6_optimization.md)
-- [14.7 代码示例与实现模式](14.7_runnable_code_examples.md)
+- [14.5 性能优化与部署](14.5_deployment_optimization.md)
+- [14.6 持续迭代与改进](14.6_optimization.md)
+- [14.7 可运行的代码示例与实现模式](14.7_runnable_code_examples.md)
 - [EnterpriseKnow 可运行最小实验](../examples/enterprise_know/README.md)
 - [本章小结](summary.md)
