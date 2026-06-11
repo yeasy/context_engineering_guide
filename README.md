@@ -8,8 +8,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
 [![Release](https://img.shields.io/github/release/yeasy/context_engineering_guide.svg)](https://github.com/yeasy/context_engineering_guide/releases)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.06-blue)
-[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/context_engineering_guide)
-[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest)
+[![Online Reading](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB-GitBook-brightgreen)](https://yeasy.gitbook.io/context_engineering_guide)
+[![PDF](https://img.shields.io/badge/PDF-%E4%B8%8B%E8%BD%BD-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest)
 
 [开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
 
