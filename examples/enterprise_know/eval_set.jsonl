@@ -1,8 +1,8 @@
-{"case_type":"positive","query":"差旅报销需要在多久内提交？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"required_terms":["30 天"]}
-{"case_type":"positive","query":"生产数据库访问需要什么审批？","department":"engineering","expected_behavior":"answer","expected_sources":["security_access"],"required_terms":["堡垒机","MFA"]}
-{"case_type":"positive","query":"VPN 登录失败怎么办？","department":"all","expected_behavior":"answer","expected_sources":["it_support"],"required_terms":["自助服务台"]}
-{"case_type":"negative","query":"差旅完成 60 天后还能算按时提交吗？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"required_terms":["30 天"]}
+{"case_type":"positive","query":"差旅报销需要在多久内提交？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"allowed_sources":["hr_travel"],"required_terms":["30 天"]}
+{"case_type":"positive","query":"生产数据库访问需要什么审批？","department":"engineering","expected_behavior":"answer","expected_sources":["security_access"],"allowed_sources":["security_access"],"required_terms":["堡垒机","MFA"]}
+{"case_type":"positive","query":"VPN 登录失败怎么办？","department":"all","expected_behavior":"answer","expected_sources":["it_support"],"allowed_sources":["it_support"],"required_terms":["自助服务台"]}
+{"case_type":"negative","query":"差旅完成 60 天后还能算按时提交吗？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"allowed_sources":["hr_travel"],"forbidden_sources":["it_support"],"required_terms":["30 天"]}
 {"case_type":"unauthorized","query":"生产数据库访问需要什么审批？","department":"hr","expected_behavior":"abstain","expected_sources":[],"forbidden_sources":["security_access"],"required_terms":[]}
-{"case_type":"conflicting-source","query":"聊天消息称差旅报销期限是 60 天，正式制度要求多久？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"required_terms":["30 天"]}
+{"case_type":"conflicting-source","query":"聊天消息称差旅报销期限是 60 天，正式制度要求多久？","department":"all","expected_behavior":"answer","expected_sources":["hr_travel"],"allowed_sources":["hr_travel"],"required_terms":["30 天"]}
 {"case_type":"missing-info","query":"海外差旅每日餐饮补贴上限是多少？","department":"all","expected_behavior":"abstain","expected_sources":[],"required_terms":[]}
 {"case_type":"irrelevant","query":"今天北京天气如何？","department":"all","expected_behavior":"abstain","expected_sources":[],"required_terms":[]}

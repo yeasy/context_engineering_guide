@@ -13,7 +13,7 @@ from typing import Dict, Iterable, List, Sequence
 ROOT = Path(__file__).resolve().parent
 DEFAULT_DOC_DIR = ROOT / "sample_docs"
 DEFAULT_EVAL_SET = ROOT / "eval_set.jsonl"
-MIN_QUERY_TERM_COVERAGE = 0.2
+MIN_QUERY_TERM_COVERAGE = 0.25
 
 
 @dataclass(frozen=True)
@@ -300,6 +300,14 @@ def iter_jsonl(path: Path) -> Iterable[Dict[str, object]]:
             raise ValueError(f"Invalid JSONL at {path}:{line_number}: {exc}") from exc
 
 
+def source_matches(source_id: str, configured_sources: Sequence[str]) -> bool:
+    """Match a configured document id against an exact chunk id."""
+    return any(
+        source_id == configured or source_id.startswith(f"{configured}#")
+        for configured in configured_sources
+    )
+
+
 def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
     cases = list(iter_jsonl(path))
     retriever = HybridRetriever(load_chunks(DEFAULT_DOC_DIR))
@@ -311,26 +319,47 @@ def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
         case_type = str(case.get("case_type", "positive"))
         expected_behavior = str(case.get("expected_behavior", "answer"))
         expected_sources = [str(item) for item in case.get("expected_sources", [])]
+        default_allowed = expected_sources if expected_behavior == "answer" else []
+        allowed_sources = [
+            str(item) for item in case.get("allowed_sources", default_allowed)
+        ]
         forbidden_sources = [str(item) for item in case.get("forbidden_sources", [])]
         required_terms = [str(item) for item in case.get("required_terms", [])]
         results = retriever.search(query, department=department, top_k=4)
         answer = answer_from_context(query, results)
         result_ids = [result.chunk.id for result in results]
 
-        source_hit = (
-            all(
-                any(result_id.startswith(expected) for result_id in result_ids)
-                for expected in expected_sources
-            )
-            if expected_sources
-            else not result_ids
+        source_hit = all(
+            any(source_matches(result_id, [expected]) for result_id in result_ids)
+            for expected in expected_sources
+        )
+        unexpected_sources = [
+            result_id
+            for result_id in result_ids
+            if not source_matches(result_id, allowed_sources)
+        ]
+        source_precision = (
+            round((len(result_ids) - len(unexpected_sources)) / len(result_ids), 4)
+            if result_ids
+            else 1.0
         )
         missing_terms = [term for term in required_terms if term not in answer]
         term_hit = not missing_terms
         forbidden_hits = [
-            source
-            for source in forbidden_sources
-            if any(result_id.startswith(source) for result_id in result_ids)
+            result_id
+            for result_id in result_ids
+            if source_matches(result_id, forbidden_sources)
+        ]
+        cited_sources = re.findall(r"\[来源:\s*([^\]]+)\]", answer)
+        unexpected_answer_sources = [
+            source_id
+            for source_id in cited_sources
+            if not source_matches(source_id, allowed_sources)
+        ]
+        forbidden_answer_sources = [
+            source_id
+            for source_id in cited_sources
+            if source_matches(source_id, forbidden_sources)
         ]
         behavior_hit = (
             not result_ids if expected_behavior == "abstain" else bool(result_ids)
@@ -341,15 +370,37 @@ def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
             failures.append("expected source not retrieved")
         if missing_terms:
             failures.append(f"missing required terms: {', '.join(missing_terms)}")
+        if unexpected_sources:
+            failures.append(
+                f"unexpected source retrieved: {', '.join(unexpected_sources)}"
+            )
         if forbidden_hits:
             failures.append(f"forbidden source retrieved: {', '.join(forbidden_hits)}")
+        if unexpected_answer_sources:
+            failures.append(
+                "unexpected answer evidence: "
+                + ", ".join(unexpected_answer_sources)
+            )
+        if forbidden_answer_sources:
+            failures.append(
+                "forbidden answer evidence: "
+                + ", ".join(forbidden_answer_sources)
+            )
         if not behavior_hit:
             failures.append(
                 "expected abstention but retrieved sources"
                 if expected_behavior == "abstain"
                 else "expected answer but no supported result"
             )
-        passed = source_hit and term_hit and not forbidden_hits and behavior_hit
+        passed = (
+            source_hit
+            and term_hit
+            and not unexpected_sources
+            and not forbidden_hits
+            and not unexpected_answer_sources
+            and not forbidden_answer_sources
+            and behavior_hit
+        )
 
         reports.append(
             {
@@ -360,7 +411,15 @@ def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
                 "term_hit": term_hit,
                 "missing_terms": missing_terms,
                 "expected_sources": expected_sources,
+                "allowed_sources": allowed_sources,
+                "forbidden_sources": forbidden_sources,
                 "actual_sources": result_ids,
+                "unexpected_sources": unexpected_sources,
+                "forbidden_retrieved_sources": forbidden_hits,
+                "source_precision": source_precision,
+                "cited_sources": cited_sources,
+                "unexpected_answer_sources": unexpected_answer_sources,
+                "forbidden_answer_sources": forbidden_answer_sources,
                 "failure_reason": "; ".join(failures) if failures else None,
                 "passed": passed,
                 "answer": answer,
@@ -375,11 +434,17 @@ def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
     answer_term_hit_rate = (
         sum(1 for item in reports if item["term_hit"]) / total if total else 0.0
     )
+    source_precision = (
+        sum(float(item["source_precision"]) for item in reports) / total
+        if total
+        else 0.0
+    )
 
     return {
         "case_count": total,
         "source_hit_rate": round(source_hit_rate, 4),
         "answer_term_hit_rate": round(answer_term_hit_rate, 4),
+        "source_precision": round(source_precision, 4),
         "passed": bool(reports) and all(bool(item["passed"]) for item in reports),
         "cases": reports,
     }

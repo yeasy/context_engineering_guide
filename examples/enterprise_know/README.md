@@ -35,7 +35,7 @@ python3 examples/enterprise_know/enterprise_know.py --eval
 python3 -m unittest examples/enterprise_know/test_enterprise_know.py
 ```
 
-评估通过时，`--eval` 输出应包含 `passed: true`，并且 `source_hit_rate` 与 `answer_term_hit_rate` 都为 `1.0`。任一 case 失败时命令返回非零状态；逐条报告会给出 `missing_terms`、`expected_sources`、`actual_sources` 和 `failure_reason`，用于区分关键项缺失、来源错配、越权命中和拒答失败。
+评估通过时，`--eval` 输出应包含 `passed: true`，并且 `source_hit_rate`、`answer_term_hit_rate` 与 `source_precision` 都为 `1.0`。对回答类 case，`expected_sources` 表示必须命中的来源，`allowed_sources` 是检索与回答可引用来源的白名单（未填写时默认等于 `expected_sources`），`forbidden_sources` 则显式标记禁止命中的来源。任一 case 失败时命令返回非零状态；逐条报告会给出 `missing_terms`、`actual_sources`、`unexpected_sources`、`forbidden_retrieved_sources`、`cited_sources`、回答证据污染字段和 `failure_reason`，用于区分关键项缺失、来源错配、越权命中、回答污染和拒答失败。
 
 ## 文件说明
 

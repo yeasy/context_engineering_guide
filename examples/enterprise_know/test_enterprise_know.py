@@ -41,16 +41,30 @@ class EnterpriseKnowTest(unittest.TestCase):
         self.assertIn("来源", result["answer"])
         self.assertIn("it_support", result["answer"])
 
+    def test_negative_travel_query_excludes_unrelated_vpn_evidence(self):
+        result = run_query("差旅完成 60 天后还能算按时提交吗？")
+
+        self.assertEqual(["hr_travel#1"], [item["id"] for item in result["results"]])
+        self.assertNotIn("VPN", result["answer"])
+
     def test_eval_set_passes(self):
         report = evaluate()
         self.assertTrue(report["passed"], report)
         self.assertEqual(report["source_hit_rate"], 1.0)
         self.assertEqual(report["answer_term_hit_rate"], 1.0)
+        self.assertEqual(report["source_precision"], 1.0)
         self.assertGreaterEqual(report["case_count"], 8)
         for case in report["cases"]:
             self.assertIn("missing_terms", case)
             self.assertIn("expected_sources", case)
+            self.assertIn("allowed_sources", case)
             self.assertIn("actual_sources", case)
+            self.assertIn("unexpected_sources", case)
+            self.assertIn("forbidden_sources", case)
+            self.assertIn("forbidden_retrieved_sources", case)
+            self.assertIn("source_precision", case)
+            self.assertIn("cited_sources", case)
+            self.assertIn("unexpected_answer_sources", case)
             self.assertIn("failure_reason", case)
             self.assertTrue(case["passed"], case)
 
@@ -91,6 +105,47 @@ class EnterpriseKnowTest(unittest.TestCase):
         self.assertTrue(case["actual_sources"])
         self.assertIn("expected source", case["failure_reason"])
         self.assertIn("missing required terms", case["failure_reason"])
+
+    def test_eval_rejects_unexpected_source_and_answer_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "polluted.jsonl"
+            path.write_text(
+                json.dumps(
+                    {
+                        "case_type": "negative",
+                        "query": "差旅报销 VPN 登录失败",
+                        "department": "all",
+                        "expected_behavior": "answer",
+                        "expected_sources": ["hr_travel"],
+                        "allowed_sources": ["hr_travel"],
+                        "forbidden_sources": ["it_support"],
+                        "required_terms": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            case = evaluate(path)["cases"][0]
+
+        self.assertFalse(case["passed"])
+        self.assertEqual(["hr_travel"], case["expected_sources"])
+        self.assertEqual(["hr_travel"], case["allowed_sources"])
+        self.assertIn("forbidden_sources", case)
+        self.assertEqual(["it_support"], case["forbidden_sources"])
+        self.assertIn("hr_travel#1", case["actual_sources"])
+        self.assertIn("it_support#1", case["actual_sources"])
+        self.assertIn("it_support#1", case["unexpected_sources"])
+        self.assertEqual(["it_support#1"], case["forbidden_retrieved_sources"])
+        self.assertLess(case["source_precision"], 1.0)
+        self.assertIn("VPN", case["answer"])
+        self.assertIn("it_support#1", case["cited_sources"])
+        self.assertIn("it_support#1", case["unexpected_answer_sources"])
+        self.assertIn("it_support#1", case["forbidden_answer_sources"])
+        self.assertIn("unexpected source", case["failure_reason"])
+        self.assertIn("forbidden source", case["failure_reason"])
+        self.assertIn("unexpected answer evidence", case["failure_reason"])
+        self.assertIn("forbidden answer evidence", case["failure_reason"])
 
     def test_eval_cli_returns_nonzero_when_a_case_fails(self):
         with tempfile.TemporaryDirectory() as directory:
