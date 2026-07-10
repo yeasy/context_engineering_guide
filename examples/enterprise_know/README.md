@@ -7,7 +7,7 @@
 - 权限过滤：按部门隔离受限知识。
 - 上下文组装：控制上下文大小并保留来源。
 - 带引用回答：只基于检索片段生成答案。
-- 评估集回归：检查来源命中和答案关键项。
+- 评估集回归：同时覆盖正例、否定提问、越权、冲突来源、信息缺失和无关问题。
 
 ## 快速运行
 
@@ -35,7 +35,7 @@ python3 examples/enterprise_know/enterprise_know.py --eval
 python3 -m unittest examples/enterprise_know/test_enterprise_know.py
 ```
 
-评估通过时，`--eval` 输出应包含 `passed: true`，并且 `source_hit_rate` 与 `answer_term_hit_rate` 都为 `1.0`。单元测试应以 `OK` 结束；如果任一项失败，先查看逐条 case 的 `missing_terms`、`expected_source` 和实际命中来源。
+评估通过时，`--eval` 输出应包含 `passed: true`，并且 `source_hit_rate` 与 `answer_term_hit_rate` 都为 `1.0`。任一 case 失败时命令返回非零状态；逐条报告会给出 `missing_terms`、`expected_sources`、`actual_sources` 和 `failure_reason`，用于区分关键项缺失、来源错配、越权命中和拒答失败。
 
 ## 文件说明
 

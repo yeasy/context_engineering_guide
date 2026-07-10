@@ -89,6 +89,7 @@
 - 智能体上下文管理
 - 自主检索增强生成 (Agentic RAG)
 - 长上下文模型应用
+- [Context→Harness→External Loop](10_advanced/10.9_context_harness_external_loop.md) 长任务控制闭环
 - 多模态上下文管理
 - 上下文工程反模式
 

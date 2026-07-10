@@ -2,7 +2,70 @@ import os
 import re
 import sys
 import argparse
+from datetime import date, datetime, timedelta
 from pathlib import Path
+
+
+VOLATILE_FACTS = Path("appendix/volatile_facts.md")
+
+
+def check_volatile_facts(filepath=VOLATILE_FACTS, today=None):
+    """Validate the dated snapshot that contains deliberately volatile claims."""
+    path = Path(filepath)
+    current_date = today or date.today()
+    issues = []
+
+    try:
+        content = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        return [f"{path} [Volatile facts] Cannot read ledger: {exc}"]
+
+    metadata = re.search(
+        r"`verified_at`:\s*(\d{4}-\d{2}-\d{2})\s*·\s*"
+        r"`expires_at`:\s*(\d{4}-\d{2}-\d{2})\s*·\s*"
+        r"`ttl_days`:\s*(\d+)",
+        content,
+    )
+    if metadata is None:
+        return [
+            f"{path} [Volatile facts] Missing verified_at, expires_at, or ttl_days metadata."
+        ]
+
+    try:
+        verified_at = datetime.strptime(metadata.group(1), "%Y-%m-%d").date()
+        expires_at = datetime.strptime(metadata.group(2), "%Y-%m-%d").date()
+        ttl_days = int(metadata.group(3))
+    except ValueError as exc:
+        return [f"{path} [Volatile facts] Invalid metadata: {exc}"]
+
+    if ttl_days != 30 or expires_at - verified_at != timedelta(days=30):
+        issues.append(
+            f"{path} [Volatile facts] Snapshot TTL must be exactly 30 days."
+        )
+    if verified_at > current_date:
+        issues.append(
+            f"{path} [Volatile facts] verified_at is in the future: {verified_at}."
+        )
+    if current_date > expires_at:
+        issues.append(
+            f"{path} [Volatile facts] Snapshot expired on {expires_at}."
+        )
+
+    statuses = re.findall(
+        r"<!--\s*volatile-status:\s+id=[^\s]+\s+status=([^\s]+)\s*-->",
+        content,
+    )
+    if not statuses:
+        issues.append(f"{path} [Volatile facts] Missing volatile-status marker.")
+    for status in statuses:
+        if status == "open-conflict":
+            issues.append(f"{path} [Volatile facts] Ledger has an unresolved conflict.")
+        elif status not in {"current", "resolved-conflict"}:
+            issues.append(
+                f"{path} [Volatile facts] Unsupported volatile-status: {status}."
+            )
+
+    return issues
 
 def check_trailing_newline(content, filepath, issues):
     if not content.endswith('\n') or content.endswith('\n\n'):
@@ -116,6 +179,8 @@ def main():
     repo_dir = '.'
     issues = []
     scanned_files = 0
+
+    issues.extend(check_volatile_facts())
 
     for root, dirs, files in os.walk(repo_dir):
         if any(skip in root.split(os.sep) for skip in ['.git', '.obsidian', '_images', '__pycache__', '.agent', 'node_modules', '_book']):

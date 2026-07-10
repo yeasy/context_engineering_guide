@@ -14,4 +14,5 @@
 - [10.6 Graph RAG 失败案例分析](10.6_graph_rag_failures.md)
 - [10.7 多模态上下文安全策略](10.7_multimodal_context_security.md)
 - [10.8 长时间任务的上下文策略](10.8_long_horizon_tasks.md)
+- [10.9 Context→Harness→External Loop](10.9_context_harness_external_loop.md)
 - [本章小结](summary.md)

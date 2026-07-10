@@ -308,37 +308,79 @@ def evaluate(path: Path = DEFAULT_EVAL_SET) -> Dict[str, object]:
     for case in cases:
         query = str(case["query"])
         department = str(case.get("department", "all"))
+        case_type = str(case.get("case_type", "positive"))
+        expected_behavior = str(case.get("expected_behavior", "answer"))
         expected_sources = [str(item) for item in case.get("expected_sources", [])]
+        forbidden_sources = [str(item) for item in case.get("forbidden_sources", [])]
         required_terms = [str(item) for item in case.get("required_terms", [])]
         results = retriever.search(query, department=department, top_k=4)
         answer = answer_from_context(query, results)
         result_ids = [result.chunk.id for result in results]
 
-        source_hit = any(
-            any(result_id.startswith(expected) for result_id in result_ids)
-            for expected in expected_sources
+        source_hit = (
+            all(
+                any(result_id.startswith(expected) for result_id in result_ids)
+                for expected in expected_sources
+            )
+            if expected_sources
+            else not result_ids
         )
-        term_hit = all(term in answer for term in required_terms)
+        missing_terms = [term for term in required_terms if term not in answer]
+        term_hit = not missing_terms
+        forbidden_hits = [
+            source
+            for source in forbidden_sources
+            if any(result_id.startswith(source) for result_id in result_ids)
+        ]
+        behavior_hit = (
+            not result_ids if expected_behavior == "abstain" else bool(result_ids)
+        )
+
+        failures: List[str] = []
+        if not source_hit:
+            failures.append("expected source not retrieved")
+        if missing_terms:
+            failures.append(f"missing required terms: {', '.join(missing_terms)}")
+        if forbidden_hits:
+            failures.append(f"forbidden source retrieved: {', '.join(forbidden_hits)}")
+        if not behavior_hit:
+            failures.append(
+                "expected abstention but retrieved sources"
+                if expected_behavior == "abstain"
+                else "expected answer but no supported result"
+            )
+        passed = source_hit and term_hit and not forbidden_hits and behavior_hit
 
         reports.append(
             {
+                "case_type": case_type,
                 "query": query,
+                "expected_behavior": expected_behavior,
                 "source_hit": source_hit,
                 "term_hit": term_hit,
+                "missing_terms": missing_terms,
+                "expected_sources": expected_sources,
+                "actual_sources": result_ids,
+                "failure_reason": "; ".join(failures) if failures else None,
+                "passed": passed,
                 "answer": answer,
                 "results": result_ids,
             }
         )
 
     total = len(reports)
-    source_hit_rate = sum(1 for item in reports if item["source_hit"]) / total
-    answer_term_hit_rate = sum(1 for item in reports if item["term_hit"]) / total
+    source_hit_rate = (
+        sum(1 for item in reports if item["source_hit"]) / total if total else 0.0
+    )
+    answer_term_hit_rate = (
+        sum(1 for item in reports if item["term_hit"]) / total if total else 0.0
+    )
 
     return {
         "case_count": total,
         "source_hit_rate": round(source_hit_rate, 4),
         "answer_term_hit_rate": round(answer_term_hit_rate, 4),
-        "passed": source_hit_rate == 1.0 and answer_term_hit_rate == 1.0,
+        "passed": bool(reports) and all(bool(item["passed"]) for item in reports),
         "cases": reports,
     }
 
@@ -349,11 +391,18 @@ def main() -> None:
     parser.add_argument("--department", default="all", help="Department ACL to apply.")
     parser.add_argument("--top-k", type=int, default=4)
     parser.add_argument("--eval", action="store_true", help="Run the bundled eval set.")
+    parser.add_argument(
+        "--eval-set",
+        type=Path,
+        default=DEFAULT_EVAL_SET,
+        help="JSONL eval set to use with --eval.",
+    )
     args = parser.parse_args()
 
     if args.eval:
-        print(json.dumps(evaluate(), ensure_ascii=False, indent=2))
-        return
+        report = evaluate(args.eval_set)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        raise SystemExit(0 if report["passed"] else 1)
 
     query = args.query or "差旅报销需要在多久内提交？"
     print(

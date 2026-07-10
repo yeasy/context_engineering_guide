@@ -1,0 +1,7 @@
+{
+  "name": "context-engineering-guide-mermaid",
+  "private": true,
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "10.9.1"
+  }
+}
