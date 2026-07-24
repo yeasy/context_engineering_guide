@@ -90,10 +90,15 @@ class ReleaseArtifactTests(unittest.TestCase):
         source = (Path(__file__).resolve().parents[1] / "tools" / "build_html_reader.py").read_text(
             encoding="utf-8"
         )
+        # The reader disables ambiguous simple/multiline/grid tables and the YAML
+        # metadata block, and (added 2026-07-24) enables lists_without_preceding_blankline
+        # so bold-lead-in lists don't collapse into a paragraph. Assert the pieces, not
+        # the exact string, so appending a further extension doesn't self-lock this test.
         self.assertIn(
-            'reader = "markdown-simple_tables-multiline_tables-grid_tables-yaml_metadata_block"',
+            "markdown-simple_tables-multiline_tables-grid_tables-yaml_metadata_block",
             source,
         )
+        self.assertIn("lists_without_preceding_blankline", source)
         self.assertIn('"-f", reader', source)
 
 
