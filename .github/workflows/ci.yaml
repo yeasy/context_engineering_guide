@@ -26,7 +26,7 @@ jobs:
           python3 -m unittest discover -s tests -p 'test_*.py' -v
           python3 -m unittest examples/enterprise_know/test_enterprise_know.py -v
           python3 examples/enterprise_know/enterprise_know.py --eval
-          python3 check_project_rules.py
+          python3 check_project_rules.py && python3 check_emphasis.py
 
       - name: Set up Chrome
         id: setupchrome

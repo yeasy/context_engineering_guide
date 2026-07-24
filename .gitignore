@@ -25,6 +25,7 @@ yarn-error.log*
 # Python scripts
 /*.py
 !/check_project_rules.py
+!/check_emphasis.py
 __pycache__/
 *.pyc
 
