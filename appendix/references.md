@@ -83,3 +83,8 @@
 
 - **Late Chunking**: Günther, M., Mohr, I., Williams, D. J., Wang, B., & Xiao, H. (2024). [Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models](https://arxiv.org/abs/2409.04701).
   - *解读：先用长上下文嵌入模型编码文档，再对片段池化，缓解先切块带来的上下文丢失。*
+
+## 政策与治理
+
+- **北京智能体引领发展措施**: 北京市发展改革委等四部门. (2026). [北京市加快智能体引领发展若干措施](https://www.beijing.gov.cn/zhengce/zhengcefagui/202607/t20260723_4781085.html). 京发改〔2026〕1185号.
+  - *解读：第二条将“上下文工程优化”列为夯实智能体共性底座、实施驾驭层工程（Harness Engineering，即本书所称“驭具工程”）的重点方向，是上下文工程被写入地方发展政策、获得政策层面认可的直接依据。*
