@@ -220,7 +220,7 @@ def main():
     with open(tpl, "w", encoding="utf-8") as f: f.write(TEMPLATE)
     # Chapter horizontal rules must not become simple-table separators, and
     # chapter content must not become a YAML metadata block after concatenation.
-    reader = "markdown-simple_tables-multiline_tables-grid_tables-yaml_metadata_block"
+    reader = "markdown-simple_tables-multiline_tables-grid_tables-yaml_metadata_block+lists_without_preceding_blankline"
     cmd = ["pandoc", "_combined_tmp.md", "-f", reader, "-t", "html5",
            "--standalone", "--embed-resources", "--mathml",
            "--template", tpl, "--metadata", f"title={a.title}", "-o", out_tmp]
