@@ -87,6 +87,10 @@ class VolatileFactsTests(unittest.TestCase):
             "Claude Sonnet 5",
             "Claude Opus 5",
             "Gemini 3.5 Flash",
+            "GPT-6.1 Sol",
+            "`claude-opus-5-5`",
+            "`claude-sonnet-5-5`",
+            "已于 2026-10-01 宣布弃用",
             "https://developers.openai.com/api/docs/models",
             "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
             "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
@@ -180,7 +184,7 @@ class LongHorizonContractTests(unittest.TestCase):
     def test_model_comparison_routes_volatile_claims_to_ledger(self):
         text = (ROOT / "02_llm_basics" / "2.4_model_comparison.md").read_text(encoding="utf-8")
         self.assertIn("../appendix/volatile_facts.md", text)
-        for marker in ("GPT-5.6 Sol", "GPT-5.6 Terra", "GPT-5.6 Luna", "GPT-5.3-Codex", "Claude Sonnet 5", "Gemini 3.5 Flash"):
+        for marker in ("GPT-5.6 Sol", "GPT-5.6 Terra", "GPT-5.6 Luna", "GPT-5.3-Codex", "GPT-6.1 Sol", "Claude Sonnet 5.5", "Claude Opus 5.5", "Gemini 3.5 Flash"):
             self.assertIn(marker, text)
         for stale_claim in ("推荐生产旗舰 GPT-5.5", "受限 preview GPT-5.6"):
             self.assertNotIn(stale_claim, text)
