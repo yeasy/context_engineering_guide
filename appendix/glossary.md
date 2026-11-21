@@ -110,7 +110,7 @@ Large Language Model，基于 Transformer 架构的大规模预训练语言模�
 ### M
 
 **MCP（Model Context Protocol）**
-一种开放的标准协议，用于规范 AI 模型或客户端与外部工具、资源和提示模板的交互；该协议最早由 Anthropic 推动并向社区开放。它本身是开放规范，不应被理解为 Anthropic 私有协议。
+一种开放的标准协议，用于规范 AI 模型或客户端与外部工具、资源和提示模板的交互；该协议最早由 Anthropic 推动并向社区开放，并非 Anthropic 的私有协议。
 
 **Memory Architecture（记忆架构）**
 组织和管理 AI 系统记忆的多层次结构设计。

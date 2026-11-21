@@ -1,13 +1,13 @@
 ## 本章小结
 
-本章建立了上下文工程的理论框架，为后续技术章节提供方法论指导。
+本章建立了上下文工程的理论框架。
 
 ### 关键概念清单
 
 | 概念 | 定义 |
 |------|------|
 | 信息环境 | 模型执行任务时可获取的全部信息集合及其组织方式 |
-| 四大策略 | 写入、选择、压缩、隔离——上下文管理的核心方法 |
+| 四大策略 | 上下文管理的四类核心方法：写入、选择、压缩、隔离 |
 | 上下文分层 | 按稳定性和功能将上下文分为系统层、知识层、任务层、交互层 |
 | 上下文质量 | 通过相关性、完整性、噪声比等维度衡量，并用 Recall@K / MRR / NDCG 等指标量化 |
 
@@ -58,10 +58,10 @@
 ### 预告
 
 接下来的四章将分别深入讲解四大核心策略的具体技术：
-- [第四章](../04_write/README.md)：写入策略——记忆与存储
-- [第五章](../05_select/README.md)：选择策略——检索与 [RAG](../05_select/5.1_rag_principles.md)
-- [第六章](../06_compress/README.md)：压缩策略——信息密度优化
-- [第七章](../07_isolate/README.md)：隔离策略——结构化与组织
+- [第四章](../04_write/README.md)：写入策略（记忆与存储）
+- [第五章](../05_select/README.md)：选择策略（检索与 [RAG](../05_select/5.1_rag_principles.md)）
+- [第六章](../06_compress/README.md)：压缩策略（信息密度优化）
+- [第七章](../07_isolate/README.md)：隔离策略（结构化与组织）
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 或 [PR](https://github.com/yeasy/context_engineering_guide/pulls)。
