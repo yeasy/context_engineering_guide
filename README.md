@@ -1,23 +1,12 @@
-<div align="center">
-
 # 大模型上下文工程权威指南
 
-**从理论到实践：大模型上下文工程的方法与生产落地**
+学习如何为大模型组织上下文，覆盖检索、记忆、工具调用、评估和生产治理。
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![GitHub stars](https://img.shields.io/github/stars/yeasy/context_engineering_guide?style=social)](https://github.com/yeasy/context_engineering_guide)
-[![Release](https://img.shields.io/github/release/yeasy/context_engineering_guide.svg)](https://github.com/yeasy/context_engineering_guide/releases)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026.06-blue)
-[![Online Reading](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB-GitBook-brightgreen)](https://yeasy.gitbook.io/context_engineering_guide)
-[![PDF](https://img.shields.io/badge/PDF-%E4%B8%8B%E8%BD%BD-orange)](https://github.com/yeasy/context_engineering_guide/releases/latest)
+**[在 GitBook 阅读第一章 · 上下文工程概述](https://yeasy.gitbook.io/context_engineering_guide/di-yi-bu-fen-ren-shi-shang-xia-wen-gong-cheng/01_overview)**
 
-[开始阅读](#快速开始) · [核心内容](#核心内容) · [适合谁读](#目标读者) · [参与贡献](#参与贡献)
+[全书目录（GitHub）](https://github.com/yeasy/context_engineering_guide/blob/main/SUMMARY.md) · [正式 PDF（发布页）](https://github.com/yeasy/context_engineering_guide/releases/latest)
 
-<img src="cover.jpg" width="300" alt="Context Engineering Guide Cover">
-
-</div>
-
----
+<img src="cover.jpg" width="210" alt="大模型上下文工程权威指南封面">
 
 ## 为什么需要这本书？
 
@@ -25,197 +14,83 @@
 
 当 LLM 应用从实验走向生产，**单纯的提示词设计已不足以构建可靠的 AI 系统**。
 
-上下文工程解决的核心问题是：
-
-```text
-如何在正确的时间，将正确的信息，以正确的格式，提供给模型？
-```
+> 如何在正确的时间，将正确的信息，以正确的格式，提供给模型？
 
 本书围绕这一问题，系统讲解上下文的写入、选择、压缩、隔离及其生产治理。
 
-> 💡 **本书与提示词工程的关系**：[《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) 聚焦单次交互中的提示词设计技巧；本书关注系统层面：如何通过检索增强生成（RAG）、记忆架构、工具调用和上下文压缩等工程手段，在生产环境中持续为模型提供高质量的上下文。建议先阅读提示词工程作为基础，再深入本书的上下文工程体系。
+<details>
 
-| 资源类型 | 主要价值 | 本书补充 |
-|------|------|------|
-| 厂商官方文档 | API、模型能力和参数的最新说明 | 把多家厂商的能力抽象为统一的上下文工程方法 |
-| 框架文档 | 具体框架、SDK 和组件用法 | 解释何时选择 RAG、记忆、工具、智能体和多模态策略 |
-| 本书 | 中文系统化教材与实践路径 | 串联生产、安全、评估、成本、案例和可运行示例 |
+<summary>本书与提示词、RAG 和智能体资料的关系</summary>
 
-### 本书的定位
-
-| 资料类型 | 关注对象 | 主要盲区 | 本书补足 |
-|------|------|------|------|
-| 提示词工程书 | 单次提示词、格式和示例 | 难以覆盖检索、记忆、权限、预算和多轮状态 | 将提示词纳入完整上下文生命周期 |
-| RAG 资料 | 文档检索和答案生成 | 容易忽略工具、记忆、对话、观测和事故处理 | 把 RAG 放进生产上下文架构 |
-| 智能体资料 | 规划、工具调用和多步任务 | 容易低估上下文污染、压缩和来源追踪 | 给智能体建立上下文边界和治理闭环 |
-| 平台文档 | API、参数和 SDK 用法 | 缺少跨平台抽象和工程取舍 | 提供可迁移的方法、检查清单和实战路径 |
-| 本书 | 信息来源、预算、结构、权限、评估和故障处理 | 不替代各厂商最新 API 文档 | 帮助读者设计可验证、可治理的上下文系统 |
-
-本书最终把这些主题收束为一张 [上下文架构评审卡](15_future/15.4_becoming_expert.md)：从任务边界、信息来源、写入/选择/压缩/隔离策略，到权限、预算、失败模式和回归评估，帮助读者判断一个系统是否只是“把组件串起来”，还是具备可验证、可治理、可回滚的上下文工程架构。
-
----
-
-## 核心内容
-
-<table>
-<tr>
-<td width="50%">
-
-### 第一部分：认识上下文工程
-
-- 上下文工程的定义与价值
-- 从提示词工程到上下文工程的演进
-- LLM 基础：上下文窗口与 Token
-- 理论框架：设计原则与四大核心策略
-
-</td>
-<td width="50%">
-
-### 第二部分：核心技术与策略
-
-- **Write** — 外部存储与记忆架构
-- **Select** — RAG 与检索增强生成
-- **Compress** — 摘要与上下文压缩
-- **Isolate** — 结构化与隔离设计
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 第三部分：进阶技术与架构
-
-- 工具调用与能力扩展
-- 智能体上下文管理
-- 自主检索增强生成 (Agentic RAG)
-- 长上下文模型应用
-- [Context→Harness→External Loop](10_advanced/10.9_context_harness_external_loop.md) 长任务控制闭环
-- 多模态上下文管理
-- 上下文工程反模式
-
-</td>
-<td width="50%">
-
-### 第四部分：工程实战与未来演进
-
-- 生产环境的最佳实践
-- 真实系统架构案例分析
-- 项目实战体验
-- 基础设施与未来前瞻
-- 附录 A：术语表
-- 附录 B：工具与技术生态
-- 附录 C：参考资源
-- 附录 D：参考文献
-- 附录 E：快变事实核验表
-
-</td>
-</tr>
-</table>
-
----
-
-## 阅读顺序
-
-建议按以下五步阅读：
-
-1. **认识上下文**（第 1-2 章）：理解什么是上下文窗口、Token 概念，以及为什么上下文质量影响模型输出
-2. **理论框架入门**（第 3 章）：建立信息环境设计、四大核心策略和上下文评估方法的统一框架
-3. **窗口管理实战**（第 4-7 章）：学习存储、检索、压缩和隔离等关键策略，掌握分块与优化方法
-4. **进阶技巧**（第 8-10 章）：探索工具调用、智能体上下文管理和自主 RAG 的实现方式
-5. **实践闭环**（第 12-14 章）：把方法落到生产工作流，并运行 EnterpriseKnow 最小实验，完成查询、权限过滤、引用回答和评估回归
-
----
-
-## 你将学到什么
-
-```mermaid
-graph LR
-    A[理论基础] --> B[核心技术]
-    B --> C[实战方法]
-    C --> D[进阶探索]
-
-    A1[上下文工程定义] --> A
-    A2[LLM 原理] --> A
-
-    B1[RAG 技术栈] --> B
-    B2[记忆架构] --> B
-    B3[工具调用] --> B
-
-    C1[生产部署] --> C
-    C2[智能体开发] --> C
-
-    D1[前沿技术] --> D
-    D2[行业趋势] --> D
-```
-
-| 主题 | 你将掌握的能力 |
-|------|--------------|
-| **RAG 系统** | 分块策略、嵌入模型选择、重排序优化、混合检索 |
-| **记忆架构** | 工作记忆 / 短期记忆 / 长期记忆的设计与实现 |
-| **工具调用** | Function Calling、Model Context Protocol（MCP，模型上下文协议）、工具设计原则 |
-| **智能体** | 单/多智能体上下文管理、状态追踪、记忆学习 |
-| **生产实践** | 性能优化、成本控制、可观测性、安全治理 |
-
----
-
-## 目标读者
-
-本书适合以下读者：
-
-| 角色 | 阅读重点 |
-|------|---------|
-| 🧑‍💻 **AI 应用开发者** | 核心技术 + 实践方法 |
-| ✍️ **提示词工程师** | 理论基础 + 进阶探索 |
-| 📊 **AI 产品经理** | 第一部分 + 第三部分概览 |
-| 🏗️ **AI 架构师** | 全书精读，重点关注生产实践 |
-| 🔬 **研究人员** | 进阶技术 + 未来展望 |
-
-> 💡 **前置知识**：建议具备基础编程能力和对 LLM 的基本了解。代码路线需要能阅读 Python、HTTP API 和 JSON；生产路线需要理解日志、指标、权限、缓存和发布流程；研究路线需要能读论文摘要、评估指标和基准实验。
-
-## 学习路线图
-
-```mermaid
-graph LR
-    Start[上下文工程学习入口] --> Ch1[第1章：概述]
-
-    Ch1 --> Role1["AI 应用开发者<br/>第1-3章 → 第4-9章 → 第12-14章"]
-    Ch1 --> Role2["提示词工程师<br/>第1-3章 → 第4-8章 → 第11-12章"]
-    Ch1 --> Role3["AI 产品经理<br/>第1-3章 → 第12-13章 → 第15章"]
-    Ch1 --> Role4["AI 架构师<br/>全书精读，重点第8-10章 → 第12-14章"]
-    Ch1 --> Role5["研究人员<br/>第1-3章 → 第10章 → 第12章 → 第15章"]
-
-    Role1 --> End1["掌握核心技术与生产实践"]
-    Role2 --> End2["从提示词迈向上下文工程"]
-    Role3 --> End3["产品视角的上下文策略"]
-    Role4 --> End4["设计生产级上下文架构"]
-    Role5 --> End5["前沿技术与研究方向"]
-```
-
-| 读者角色 | 学习重点 | 核心成果 |
+| 资料类型 | 关注对象 | 本书补充 |
 |---------|---------|---------|
-| **AI 应用开发者** | 第 1-3 章 → 第 4-9 章 → 第 12-14 章 | 掌握 RAG、记忆架构、工具调用、智能体和生产部署 |
-| **提示词工程师** | 第 1-3 章 → 第 4-8 章 → 第 11-12 章 | 从提示词工程升级为上下文工程，掌握记忆、检索、压缩、隔离、工具和反模式治理 |
-| **AI 产品经理** | 第 1-3 章 → 第 12-13 章 → 第 15 章 | 理解上下文工程的产品价值、行业落地和未来趋势 |
-| **AI 架构师** | 全书精读，重点第 8-10 章 → 第 12-14 章 | 设计高性能、可观测、可治理的上下文工程架构 |
-| **研究人员** | 第 1-3 章 → 第 10 章 → 第 12 章 → 第 15 章 | 掌握长上下文、多模态、评估与前沿技术方向 |
+| 提示词工程 | 单次交互中的指令、格式与示例 | 将提示词与检索、记忆、权限、预算和多轮状态纳入同一生命周期 |
+| RAG 资料 | 文档检索与答案生成 | 把检索与工具、记忆、对话历史、可观测性及事故处理结合起来 |
+| 智能体资料 | 规划、工具调用和多步任务 | 处理上下文污染、压缩、来源追踪与状态隔离 |
+| 平台和框架文档 | API、参数、SDK 和组件用法 | 提供跨平台的工程方法、取舍依据与评审清单 |
 
----
+</details>
 
-## 快速开始
+## 从哪里开始
 
-### 在线阅读
+- **想从提示词进阶到上下文工程** · 从[第一章](https://yeasy.gitbook.io/context_engineering_guide/di-yi-bu-fen-ren-shi-shang-xia-wen-gong-cheng/01_overview)开始，再读[四大核心策略](https://yeasy.gitbook.io/context_engineering_guide/di-yi-bu-fen-ren-shi-shang-xia-wen-gong-cheng/03_framework/3.2_four_strategies)，用写入、选择、压缩和隔离梳理一个现有的多轮对话。
+- **想动手做知识库问答** · 先读[上下文选择与检索](https://yeasy.gitbook.io/context_engineering_guide/di-er-bu-fen-he-xin-ji-shu-yu-ce-le/05_select)，再运行 [EnterpriseKnow 最小实验](https://github.com/yeasy/context_engineering_guide/tree/main/examples/enterprise_know)，对照不同部门的查询结果，检查权限过滤与来源引用。
+- **想管理智能体的记忆和状态** · 从[智能体上下文管理](https://yeasy.gitbook.io/context_engineering_guide/di-san-bu-fen-jin-jie-ji-shu-yu-jia-gou/09_agents)开始，明确哪些状态应保留、哪些状态可在智能体之间传递。长任务可继续读 [Context→Harness→External Loop](10_advanced/10.9_context_harness_external_loop.md)。
+- **已有应用，需要上线或排查故障** · 从[生产环境最佳实践](https://yeasy.gitbook.io/context_engineering_guide/di-si-bu-fen-gong-cheng-shi-zhan-yu-wei-lai-yan-jin/12_production)开始，用[上下文架构评审卡](15_future/15.4_becoming_expert.md)检查信息来源、权限、预算、失败模式和回归评估。
 
-👉 **推荐**：[GitBook 在线版](https://yeasy.gitbook.io/context_engineering_guide/)
+<details>
 
-### 下载离线版本
+<summary>按角色选读与前置知识</summary>
 
-本书提供 PDF 版本供离线阅读，可前往 [GitHub Releases](https://github.com/yeasy/context_engineering_guide/releases/latest) 页面下载最新版本。
+| 读者角色 | 阅读顺序 | 学习重点 |
+|---------|---------|---------|
+| AI 应用开发者 | 第 1–3 章 → 第 4–9 章 → 第 12–14 章 | 检索、记忆、工具调用、智能体和生产部署 |
+| 提示词工程师 | 第 1–3 章 → 第 4–8 章 → 第 11–12 章 | 上下文生命周期、反模式与治理 |
+| AI 产品经理 | 第 1–3 章 → 第 12–13 章 → 第 15 章 | 产品价值、行业应用和未来趋势 |
+| AI 架构师 | 全书精读，重点是第 8–10 章和第 12–14 章 | 性能、可观测性、权限和架构治理 |
+| 研究人员 | 第 1–3 章 → 第 10 章 → 第 12 章 → 第 15 章 | 长上下文、多模态、评估与前沿方向 |
 
-如需获取默认分支自动更新的预览版，可直接下载 [context_engineering_guide.pdf](https://github.com/yeasy/context_engineering_guide/releases/download/preview-pdf/context_engineering_guide.pdf)。该文件会随主线更新覆盖，不代表正式发布版本。
+建议具备基础编程能力并了解大语言模型。代码路线需要能阅读 Python、HTTP API 和 JSON。生产路线需要了解日志、指标、权限、缓存和发布流程。研究路线需要能读论文摘要、评估指标和基准实验。
 
-### 本地阅读
+更多学习与实践建议见[第 1.4 节 本书结构与学习路径](01_overview/1.4_roadmap.md)。各章末尾的“本章小结”可用于复习。
 
-先安装 [mdPress](https://github.com/yeasy/mdpress)：
+</details>
+
+## 全书结构
+
+- **认识上下文工程（第 1–3 章）** · 从[第 1 章](https://yeasy.gitbook.io/context_engineering_guide/di-yi-bu-fen-ren-shi-shang-xia-wen-gong-cheng/01_overview)了解上下文工程，继而理解上下文窗口、设计原则和质量评估方法。
+- **核心技术与策略（第 4–7 章）** · 从[第 4 章](04_write/README.md)的外部存储和记忆开始，接着学习分块、混合检索、重排序、摘要和上下文隔离。
+- **进阶技术与架构（第 8–11 章）** · 从[第 8 章](08_tools/README.md)的工具调用与 MCP 开始，进而学习智能体、长上下文、多模态、Graph RAG 及常见失败。
+- **工程实战与未来演进（第 12–15 章）** · 从[第 12 章](https://yeasy.gitbook.io/context_engineering_guide/di-si-bu-fen-gong-cheng-shi-zhan-yu-wei-lai-yan-jin/12_production)的成本、可观测性与治理开始，进一步阅读行业案例，动手实现企业知识库问答系统。
+- **附录** · 查阅[术语表](appendix/glossary.md)、[工具与技术生态](appendix/tools.md)、[参考资源](appendix/resources.md)、[参考文献](appendix/references.md)与[快变事实核验表](appendix/volatile_facts.md)。
+
+## 延伸阅读
+
+- [大模型提示词工程指南](https://yeasy.gitbook.io/prompt_engineering_guide) · 练习单次交互的指令、格式和示例设计。
+- [智能体 AI 权威指南](https://yeasy.gitbook.io/agentic_ai_guide) · 深入学习智能体架构与协作。
+- [智能体 Harness 工程指南](https://yeasy.gitbook.io/harness_engineering_guide) · 了解记忆子系统与上下文组装的工程实现。
+
+<details>
+
+<summary>更多系列图书</summary>
+
+- [零基础学 AI](https://yeasy.gitbook.io/ai_beginner_guide) · 补充人工智能的基础概念。
+- [Claude 技术指南](https://yeasy.gitbook.io/claude_guide) · 学习 MCP 协议与工具使用。
+- [大模型安全权威指南](https://yeasy.gitbook.io/ai_security_guide) · 查阅提示注入防御和 RAG 安全。
+- [OpenClaw 从入门到精通](https://yeasy.gitbook.io/openclaw_guide) · 学习开源智能体框架中的上下文工程实践。
+- [大模型原理与架构](https://yeasy.gitbook.io/llm_internals) · 深入理解大语言模型的原理与架构。
+
+</details>
+
+## 反馈与贡献
+
+欢迎在 [GitHub Issues](https://github.com/yeasy/context_engineering_guide/issues) 报告勘误或提出建议，也可以[提交 Pull Request](https://github.com/yeasy/context_engineering_guide/pulls)。
+
+<details>
+
+<summary>本地开发与预览</summary>
+
+在 macOS 上安装 [mdPress](https://github.com/yeasy/mdpress)，然后在仓库根目录启动本地预览。
 
 ```bash
 brew tap yeasy/tap
@@ -223,132 +98,22 @@ brew install --cask mdpress
 mdpress serve
 ```
 
-启动后访问 [本地阅读地址](http://localhost:9000) 即可阅读。
+启动后打开 [本地阅读地址](http://localhost:9000)。[默认分支 PDF 预览版](https://github.com/yeasy/context_engineering_guide/releases/download/preview-pdf/context_engineering_guide.pdf)随主线更新，正式版本以发布页为准。
 
-### 阅读建议
+维护[术语表](appendix/glossary.md)时，请按字母或拼音顺序排列术语，提供中英文对照和简明定义。
 
-```text
-📕 初学者：按顺序阅读全书
-📗 有经验者：重点阅读第二、三部分
-📘 快速参考：阅读每章末尾的“本章小结”
-```
+</details>
 
----
+<details>
 
-## 目录概览
+<summary>致谢</summary>
 
-```text
-第一部分：认识上下文工程
-├── 第1章：上下文工程概述
-├── 第2章：大语言模型基础
-└── 第3章：上下文工程框架
+感谢为大模型技术发展做出贡献的研究者、工程师和开源社区。感谢 [Anthropic](https://www.anthropic.com/) 对上下文工程和 MCP 的贡献，[OpenAI](https://openai.com/)、[Google](https://ai.google/)、[Meta](https://ai.meta.com/) 对大语言模型的持续创新，以及 [LangChain](https://langchain.com/)、[LlamaIndex](https://llamaindex.ai/) 对 RAG 框架的贡献。
 
-第二部分：核心技术
-├── 第4章：写入策略 — 外部存储与记忆
-├── 第5章：选择策略 — 检索增强生成
-├── 第6章：压缩策略 — 上下文优化
-└── 第7章：隔离策略 — 结构化设计
-
-第三部分：进阶技术与架构
-├── 第8章：工具调用与能力扩展
-├── 第9章：智能体上下文管理
-├── 第10章：进阶技术与架构
-└── 第11章：反模式与常见错误
-
-第四部分：工程实战与未来演进
-├── 第12章：生产环境最佳实践
-├── 第13章：行业应用与架构案例
-├── 第14章：综合实战 - 构建企业知识库问答系统
-└── 第15章：未来展望与发展趋势
-
-附录
-├── 附录A：术语表
-├── 附录B：工具与技术生态
-├── 附录C：参考资源
-├── 附录D：参考文献
-└── 附录E：快变事实核验表
-```
-
-📖 完整目录请查看 [SUMMARY.md](SUMMARY.md)，正文可从 [第一章：认识上下文工程](01_overview/README.md) 开始。
-
----
-
-## 本书特色
-
-| 特色 | 说明 |
-|------|------|
-| 📐 **生命周期框架** | 用 Write / Select / Compress / Isolate 组织上下文从写入、选择、压缩到隔离的完整过程 |
-| 🔬 **量化评估闭环** | 提供上下文质量指标、评估集设计、回归阈值和持续改进方法 |
-| 🧭 **失败案例经济学** | 用 Graph RAG、检索失败、过度压缩和上下文污染解释为什么系统会在生产中失效 |
-| 🛡️ **生产治理视角** | 覆盖权限、来源追踪、成本预算、可观测性、安全治理和事故处理 |
-| ✅ **可运行实战** | 第 14 章配套 EnterpriseKnow 本地实验，覆盖检索、ACL、来源引用和评估集回归 |
-
----
-
-## 推荐阅读
-
-本书是 AI 技术丛书的一部分。以下书籍与本书形成互补：
-
-| 书名 | 与本书的关系 |
-|------|------------|
-| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合缺乏 AI 背景的读者 |
-| [《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) | 提示词设计基础，本书的前置读物 |
-| [《Claude 技术指南》](https://yeasy.gitbook.io/claude_guide) | Claude 的 MCP 协议与工具使用实践 |
-| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 智能体的上下文管理是本书技术的核心应用场景 |
-| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | 上下文安全（提示注入防御、RAG 安全）的深度参考 |
-| [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 开源智能体框架中上下文工程的实战应用 |
-| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
-| [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide) | Harness 记忆子系统与上下文组装引擎的工程实现 |
-
----
-
-## 参与贡献
-
-欢迎贡献！您可以通过以下方式参与：
-
-- 🐛 [提交 Issue](https://github.com/yeasy/context_engineering_guide/issues) — 报告错误或提出建议
-- 📝 [提交 PR](https://github.com/yeasy/context_engineering_guide/pulls) — 改进内容或修复 typo
-- ⭐ Star 本项目 — 帮助更多人发现这本书
-
----
+</details>
 
 ## 许可证
 
 本书采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可证。
 
 您可以自由分享和演绎，但需署名、非商业使用、相同方式共享。
-
----
-
-## 项目规则
-
-为了保持书稿的专业性和一致性，本项目遵循以下规则：
-
-1. **术语表规范**：本书必须在附录中包含“术语表”（Glossary），用于标注书中出现的关键术语及其解释。
-   - 位置：`appendix/glossary.md`
-   - 格式：需按字母顺序或拼音顺序排列，包含中英文对照及简明定义。
-
----
-
-## 致谢
-
-感谢所有为大模型技术发展做出贡献的研究者与工程师，特别是：
-
-- [Anthropic](https://www.anthropic.com/) — 上下文工程领域的开创性工作与 MCP 协议
-- [OpenAI](https://openai.com/)、[Google](https://ai.google/)、[Meta](https://ai.meta.com/) — LLM 技术的持续创新
-- [LangChain](https://langchain.com/)、[LlamaIndex](https://llamaindex.ai/) — RAG 框架的宝贵贡献
-- 所有开源社区的贡献者们
-
----
-
-<div align="center">
-
-**📧 联系作者**
-
-如有问题或建议，欢迎通过 [Issue](https://github.com/yeasy/context_engineering_guide/issues) 联系。
-
----
-
-**🌟 如果这本书对你有帮助，请给个 Star 支持！**
-
-</div>
