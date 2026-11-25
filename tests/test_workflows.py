@@ -123,9 +123,23 @@ class WorkflowTests(unittest.TestCase):
             self.assertNotIn("continue-on-error", text, name)
         package = json.loads((ROOT / "tools/mermaid/package.json").read_text(encoding="utf-8"))
         lock = json.loads((ROOT / "tools/mermaid/package-lock.json").read_text(encoding="utf-8"))
-        pinned = package["dependencies"]["@mermaid-js/mermaid-cli"]
-        self.assertRegex(pinned, r"^\d+\.\d+\.\d+$", "mermaid-cli must be pinned to an exact version")
-        self.assertEqual(lock["packages"][""]["dependencies"]["@mermaid-js/mermaid-cli"], pinned)
+        dependency = "@mermaid-js/mermaid-cli"
+        pinned = package["dependencies"][dependency]
+        self.assertIsNotNone(
+            re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", pinned),
+            "mermaid-cli must be pinned to an exact version",
+        )
+        self.assertGreaterEqual(lock["lockfileVersion"], 3)
+        self.assertEqual(
+            lock["packages"][""]["dependencies"][dependency],
+            pinned,
+            "lockfile root dependency must match package.json",
+        )
+        self.assertEqual(
+            lock["packages"][f"node_modules/{dependency}"]["version"],
+            pinned,
+            "resolved mermaid-cli version must match package.json",
+        )
 
     def test_every_publication_workflow_builds_pdf_html_and_checksums(self):
         for name in ("ci.yaml", "auto-release.yml", "preview-pdf.yml"):
