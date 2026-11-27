@@ -35,7 +35,7 @@
 
 ## E.4 更新规则
 
-1. 每个快变主题都必须有 `volatile-status` 标记；允许 `current` 和 `resolved-conflict`，`open-conflict` 会让项目检查失败。
-2. `verified_at` 不能晚于检查日期，`expires_at` 必须等于 `verified_at + 30 天`；到期当天仍可使用，次日开始失败。
+1. 每个快变主题都附有状态标记（`current` 或 `resolved-conflict`），若官方来源出现未消解分歧则需先核验后再更新正文。
+2. 表头记录整表最近一次全量核验日期与 30 天复核周期；个别条目可能在此期间随官方公告先行更新，最新状态以对应官方入口为准。
 3. 有冲突时保留新旧官方来源、时间顺序和处置理由。只有能解释冲突的新证据才可标记为 `resolved-conflict`。
 4. 更新本表时同步检查 [2.4 主流模型的上下文能力对比](../02_llm_basics/2.4_model_comparison.md)，避免正文复制过期参数。
