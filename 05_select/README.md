@@ -15,4 +15,4 @@
 
 ---
 
-> **📚 延伸阅读**：OpenClaw 的记忆搜索机制（BM25 + 向量混合检索）是 RAG 在智能体中的实战应用，参见 [《OpenClaw 从入门到精通》第 6.3 节](https://yeasy.gitbook.io/openclaw_guide)。
+> **📚 延伸阅读**：OpenClaw 的记忆搜索机制（BM25 + 向量混合检索）是 RAG 在智能体中的实战应用，参见 [《OpenClaw 从入门到精通》第 6.3 节](https://yeasy.gitbook.io/openclaw_guide/di-er-bu-fen-jin-jie-shi-yong/06_context_memory/6.3_memory_mechanism)。
